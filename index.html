@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SchoolSyntaxERP — The Future of Education Management</title>
+  <meta name="description" content="SchoolSyntaxERP is an enterprise multi-tenant ERP platform for schools, colleges, and universities. Manage academics, finance, HR, admissions, attendance, and more — all in one place.">
+  <meta name="keywords" content="school ERP, education management system, school management software, multi-tenant ERP, student information system, college ERP">
+  <meta name="author" content="SchoolSyntaxERP">
+  <meta property="og:title" content="SchoolSyntaxERP — The Future of Education Management">
+  <meta property="og:description" content="Enterprise multi-tenant ERP for educational institutions. 25+ modules, 99.9% uptime, trusted by 500+ institutions worldwide.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.schoolsyntaxerp.com">
+  <meta property="og:site_name" content="SchoolSyntaxERP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SchoolSyntaxERP — Enterprise Education ERP">
+  <meta name="twitter:description" content="The complete multi-tenant ERP platform for modern educational institutions.">
+  <link rel="canonical" href="https://www.schoolsyntaxerp.com">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "SchoolSyntaxERP",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "description": "Enterprise multi-tenant ERP platform for educational institutions covering academics, finance, HR, admissions, attendance, and more.",
+    "url": "https://www.schoolsyntaxerp.com",
+    "offers": {
+      "@type": "Offer",
+      "price": "29",
+      "priceCurrency": "USD",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "29",
+        "priceCurrency": "USD",
+        "billingDuration": "P1M"
+      }
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "312"
+    }
+  }
+  </script>
+  <!-- Prevent theme flash before CSS loads -->
+  <script>
+    (function(){var t=localStorage.getItem('ss-theme');if(t)document.documentElement.setAttribute('data-theme',t);})();
+  </script>
+</head>
+<body>
+
+<!-- Scroll Progress -->
+<div class="ss-scroll-progress" id="scroll-progress"></div>
+
+<!-- NAVBAR -->
+<nav class="ss-navbar" id="navbar">
+  <div class="ss-navbar-inner">
+    <a href="index.html" class="ss-logo">
+      <div class="ss-logo-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+      <span class="ss-logo-text">School<span>Syntax</span>ERP</span>
+    </a>
+
+    <div class="ss-nav-links">
+      <a href="index.html" class="ss-nav-link active">Home</a>
+      <div class="ss-nav-item">
+        <a href="features.html" class="ss-nav-link">
+          Features <i class="fa-solid fa-chevron-down chevron"></i>
+        </a>
+        <div class="ss-dropdown ss-dropdown-wide">
+          <a href="features.html" class="ss-dropdown-item">
+            <div class="ss-dropdown-item-icon"><i class="fa-solid fa-stars"></i></div>
+            <div class="ss-dropdown-item-text"><strong>Features Overview</strong><span>All platform capabilities</span></div>
+          </a>
+          <a href="security.html" class="ss-dropdown-item">
+            <div class="ss-dropdown-item-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <div class="ss-dropdown-item-text"><strong>Security</strong><span>Enterprise-grade protection</span></div>
+          </a>
+          <a href="multi-tenancy.html" class="ss-dropdown-item">
+            <div class="ss-dropdown-item-icon"><i class="fa-solid fa-layer-group"></i></div>
+            <div class="ss-dropdown-item-text"><strong>Multi-Tenancy</strong><span>Isolated tenant architecture</span></div>
+          </a>
+          <a href="platform-admin.html" class="ss-dropdown-item">
+            <div class="ss-dropdown-item-icon"><i class="fa-solid fa-sliders"></i></div>
+            <div class="ss-dropdown-item-text"><strong>Platform Admin</strong><span>Total platform control</span></div>
+          </a>
+        </div>
+      </div>
+
+      <div class="ss-nav-item">
+        <a href="modules.html" class="ss-nav-link">
+          Modules <i class="fa-solid fa-chevron-down chevron"></i>
+        </a>
+        <div class="ss-dropdown ss-dropdown-wide">
+          <a href="modules.html#academics" class="ss-dropdown-item">
+            <div class="ss-dropdown-item-icon"><i class="fa-solid fa-book-open"></i></div>
+            <div class="ss-dropdown-item-text"><strong>Academic Management</strong><span>Classes, subjects, timetables</span></div>
+          </a>
+          <a href="modules.html#admissions" class="ss-dropdown-item">
+            <div class="ss-dropdown-item-icon"><i class="fa-solid fa-door-open"></i></div>
+            <div class="ss-dropdown-item-text"><strong>Admissions</strong><span>Online applications & intake</span></div>
+          </a>
+          <a href="modules.html#finance" class="ss-dropdown-item">
+            <div class="ss-dropdown-item-icon"><i class="fa-solid fa-coins"></i></div>
+            <div class="ss-dropdown-item-text"><strong>Finance & Billing</strong><span>Fees, invoices, payments</span></div>
+          </a>
+          <a href="modules.html#hr" class="ss-dropdown-item">
+            <div class="ss-dropdown-item-icon"><i class="fa-solid fa-users"></i></div>
+            <div class="ss-dropdown-item-text"><strong>HR & Payroll</strong><span>Staff management & payslips</span></div>
+          </a>
+          <a href="modules.html#exams" class="ss-dropdown-item">
+            <div class="ss-dropdown-item-icon"><i class="fa-solid fa-file-pen"></i></div>
+            <div class="ss-dropdown-item-text"><strong>Examinations</strong><span>Results, grading, reports</span></div>
+          </a>
+          <a href="modules.html#attendance" class="ss-dropdown-item">
+            <div class="ss-dropdown-item-icon"><i class="fa-solid fa-calendar-check"></i></div>
+            <div class="ss-dropdown-item-text"><strong>Attendance</strong><span>Daily tracking & analytics</span></div>
+          </a>
+          <a href="modules.html#communication" class="ss-dropdown-item">
+            <div class="ss-dropdown-item-icon"><i class="fa-solid fa-comments"></i></div>
+            <div class="ss-dropdown-item-text"><strong>Communication</strong><span>SMS, email & announcements</span></div>
+          </a>
+          <a href="modules.html#analytics" class="ss-dropdown-item">
+            <div class="ss-dropdown-item-icon"><i class="fa-solid fa-chart-line"></i></div>
+            <div class="ss-dropdown-item-text"><strong>Reports & Analytics</strong><span>Insights & dashboards</span></div>
+          </a>
+        </div>
+      </div>
+
+      <a href="pricing.html" class="ss-nav-link">Pricing</a>
+      <a href="gallery.html" class="ss-nav-link">Gallery</a>
+      <div class="ss-nav-item">
+        <a href="about.html" class="ss-nav-link">Company <i class="fa-solid fa-chevron-down chevron"></i></a>
+        <div class="ss-dropdown">
+          <a href="about.html" class="ss-dropdown-item"><div class="ss-dropdown-item-icon"><i class="fa-solid fa-building"></i></div><div class="ss-dropdown-item-text"><strong>About Us</strong><span>Our story &amp; mission</span></div></a>
+          <a href="blog.html" class="ss-dropdown-item"><div class="ss-dropdown-item-icon"><i class="fa-solid fa-newspaper"></i></div><div class="ss-dropdown-item-text"><strong>Blog</strong><span>EdTech insights</span></div></a>
+          <a href="careers.html" class="ss-dropdown-item"><div class="ss-dropdown-item-icon"><i class="fa-solid fa-briefcase"></i></div><div class="ss-dropdown-item-text"><strong>Careers</strong><span>Join our team</span></div></a>
+          <a href="contact.html" class="ss-dropdown-item"><div class="ss-dropdown-item-icon"><i class="fa-solid fa-envelope"></i></div><div class="ss-dropdown-item-text"><strong>Contact</strong><span>Get in touch</span></div></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="ss-nav-actions">
+      <div id="google_translate_element" class="ss-translate d-none d-xl-inline-flex"></div>
+      <button class="ss-theme-toggle" aria-label="Switch to dark mode">
+        <i class="ss-theme-icon fa-solid fa-moon"></i>
+      </button>
+      <a href="demo.html" class="ss-btn ss-btn-primary ss-btn-sm d-none d-lg-inline-flex">Request Demo</a>
+      <button class="ss-hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="ss-mobile-menu" id="mobile-menu">
+  <a href="index.html" class="ss-mobile-nav-link active">Home</a>
+  <a href="features.html" class="ss-mobile-nav-link">Features</a>
+  <a href="modules.html" class="ss-mobile-nav-link">Modules</a>
+  <a href="pricing.html" class="ss-mobile-nav-link">Pricing</a><a href="gallery.html" class="ss-mobile-nav-link">Gallery</a>
+  <a href="solutions.html" class="ss-mobile-nav-link">Solutions</a>
+  <a href="industries.html" class="ss-mobile-nav-link">Industries</a>
+  <a href="about.html" class="ss-mobile-nav-link">About</a>
+  <a href="blog.html" class="ss-mobile-nav-link">Blog</a>
+  <a href="careers.html" class="ss-mobile-nav-link">Careers</a>
+  <a href="contact.html" class="ss-mobile-nav-link">Contact</a>
+  <div class="ss-mobile-cta">
+    <a href="demo.html" class="ss-btn ss-btn-primary ss-btn-block">Request a Demo</a>
+  </div>
+</div>
+
+<!-- HERO SECTION -->
+<section class="ss-hero">
+  <div class="ss-hero-bg">
+    <div class="ss-hero-mesh"></div>
+    <div class="ss-hero-grid"></div>
+    <div class="ss-orb ss-orb-primary" style="width:500px;height:500px;top:-100px;left:-100px;"></div>
+    <div class="ss-orb ss-orb-secondary" style="width:400px;height:400px;bottom:-50px;right:-100px;"></div>
+  </div>
+
+  <div class="ss-container ss-hero-content ss-hero-pad">
+
+    <!-- Centred headline + quote -->
+    <div class="ss-hero-center" data-aos="fade-up" data-aos-duration="800">
+      <div class="ss-badge ss-badge-primary mb-4">
+        <i class="fa-solid fa-rocket"></i>&nbsp; Trusted by 500+ institutions worldwide
+      </div>
+
+      <h1 class="ss-hero-headline mb-2">
+        The Future of<br>
+        <span class="text-gradient">Education Management</span>
+      </h1>
+      <p class="ss-hero-tagline">Unified &middot; Scalable &middot; Trusted</p>
+
+      <blockquote class="ss-hero-quote">
+        <p>"Education is the most powerful weapon which you can use to change the world."</p>
+        <cite>— Nelson Mandela, Activist &amp; Former President of South Africa</cite>
+      </blockquote>
+
+      <p class="ss-lead mb-8">
+        One enterprise platform to run your entire institution. Academics, finance, HR, admissions, attendance, communication — all fully integrated, all multi-tenant ready.
+      </p>
+
+      <div class="d-flex flex-wrap gap-3 justify-content-center mb-8">
+        <a href="demo.html" class="ss-btn ss-btn-primary ss-btn-xl">
+          <i class="fa-solid fa-play-circle"></i> Request a Demo
+        </a>
+        <a href="features.html" class="ss-btn ss-btn-outline ss-btn-xl">
+          <i class="fa-solid fa-compass"></i> Explore Features
+        </a>
+      </div>
+
+      <div class="d-flex align-items-center justify-content-center gap-4 flex-wrap">
+        <div class="d-flex align-items-center gap-2">
+          <div class="ss-live-dot"></div>
+          <span class="ss-trust-badge-text">99.9% Uptime SLA</span>
+        </div>
+        <div class="ss-vr"></div>
+        <div class="d-flex align-items-center gap-2">
+          <i class="fa-solid fa-shield-check text-success"></i>
+          <span class="ss-trust-badge-text">SOC 2 Ready</span>
+        </div>
+        <div class="ss-vr"></div>
+        <div class="d-flex align-items-center gap-2">
+          <i class="fa-solid fa-lock text-primary"></i>
+          <span class="ss-trust-badge-text">GDPR Compliant</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Full-width dashboard mockup below text -->
+    <div class="ss-hero-mockup-wrap" data-aos="fade-up" data-aos-delay="300">
+      <div class="ss-dashboard-mockup animate-float-slow">
+        <div class="ss-dashboard-topbar">
+          <div class="ss-dashboard-dots"><span></span><span></span><span></span></div>
+          <div class="ss-dashboard-title-bar"></div>
+          <div class="d-flex gap-2">
+            <div class="ss-dash-topbar-chip"></div>
+            <div class="ss-dash-topbar-chip-sm"></div>
+          </div>
+        </div>
+        <div class="ss-dashboard-body">
+          <div class="ss-dashboard-sidebar">
+            <div class="ss-dash-sidebar-item active"><div class="ss-dash-sidebar-item-dot"></div><div class="ss-dash-sidebar-item-line"></div></div>
+            <div class="ss-dash-sidebar-item"><div class="ss-dash-sidebar-item-dot"></div><div class="ss-dash-sidebar-item-line"></div></div>
+            <div class="ss-dash-sidebar-item"><div class="ss-dash-sidebar-item-dot"></div><div class="ss-dash-sidebar-item-line"></div></div>
+            <div class="ss-dash-sidebar-item"><div class="ss-dash-sidebar-item-dot"></div><div class="ss-dash-sidebar-item-line"></div></div>
+            <div class="ss-dash-sidebar-item"><div class="ss-dash-sidebar-item-dot"></div><div class="ss-dash-sidebar-item-line"></div></div>
+            <div class="ss-dash-sidebar-item"><div class="ss-dash-sidebar-item-dot"></div><div class="ss-dash-sidebar-item-line"></div></div>
+          </div>
+          <div class="ss-dashboard-main">
+            <div class="ss-dash-metrics">
+              <div class="ss-dash-metric"><div class="ss-dash-metric-val"></div><div class="ss-dash-metric-label"></div></div>
+              <div class="ss-dash-metric"><div class="ss-dash-metric-val ss-dash-metric-val-green"></div><div class="ss-dash-metric-label"></div></div>
+              <div class="ss-dash-metric"><div class="ss-dash-metric-val ss-dash-metric-val-amber"></div><div class="ss-dash-metric-label"></div></div>
+              <div class="ss-dash-metric"><div class="ss-dash-metric-val ss-dash-metric-val-cyan"></div><div class="ss-dash-metric-label"></div></div>
+            </div>
+            <div class="ss-dash-charts">
+              <div class="ss-dash-chart-box">
+                <div class="ss-dash-chart-label"></div>
+                <div class="ss-dash-chart-bars">
+                  <div class="ss-dash-bar" style="height:60%;"></div>
+                  <div class="ss-dash-bar" style="height:80%;"></div>
+                  <div class="ss-dash-bar" style="height:50%;"></div>
+                  <div class="ss-dash-bar" style="height:90%;"></div>
+                  <div class="ss-dash-bar" style="height:70%;"></div>
+                  <div class="ss-dash-bar" style="height:85%;"></div>
+                  <div class="ss-dash-bar" style="height:65%;"></div>
+                  <div class="ss-dash-bar" style="height:95%;opacity:1;"></div>
+                </div>
+              </div>
+              <div class="ss-dash-chart-box" style="display:flex;align-items:center;justify-content:center;">
+                <div class="ss-dash-chart-donut"><div class="ss-dash-chart-donut-inner"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trust logos -->
+    <div class="mt-5 pt-4 ss-divider-top" data-aos="fade-up" data-aos-delay="400">
+      <p class="text-center mb-4 ss-trust-label">Trusted by forward-thinking institutions</p>
+      <div class="ss-trust-bar">
+        <span class="ss-trust-logo">Greenfield Academy</span>
+        <span class="ss-trust-logo">Nexus University</span>
+        <span class="ss-trust-logo">Horizon Polytechnic</span>
+        <span class="ss-trust-logo">Brightstone Schools</span>
+        <span class="ss-trust-logo">Metro College</span>
+        <span class="ss-trust-logo">Apex Learning Network</span>
+        <span class="ss-trust-logo">StellarEd Group</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<section class="ss-section-surface ss-section-sm">
+  <div class="ss-container">
+    <div class="row g-4">
+      <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="0">
+        <div class="ss-stat-card">
+          <span class="ss-stat-number" data-counter="500" data-suffix="+">0+</span>
+          <span class="ss-stat-label">Institutions Served</span>
+        </div>
+      </div>
+      <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
+        <div class="ss-stat-card">
+          <span class="ss-stat-number" data-counter="2" data-suffix="M+">0</span>
+          <span class="ss-stat-label">Students Managed</span>
+        </div>
+      </div>
+      <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
+        <div class="ss-stat-card">
+          <span class="ss-stat-number" data-counter="99.9" data-suffix="%" data-decimals="1">0%</span>
+          <span class="ss-stat-label">Platform Uptime</span>
+        </div>
+      </div>
+      <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="300">
+        <div class="ss-stat-card">
+          <span class="ss-stat-number" data-counter="25" data-suffix="+">0+</span>
+          <span class="ss-stat-label">Integrated Modules</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCT OVERVIEW -->
+<section class="ss-section ss-section-dark">
+  <div class="ss-container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-5" data-aos="fade-right">
+        <span class="ss-overline">One Platform. Everything.</span>
+        <h2 class="mb-4">Every module your institution needs, <span class="text-gradient">deeply integrated</span></h2>
+        <p class="mb-5" style="color:var(--color-text-muted);font-size:1.05rem;line-height:1.7;">
+          Stop juggling five different software tools. SchoolSyntaxERP brings every operational function under one roof — from enrollment to graduation, from invoice to payslip, from lesson plan to exam result.
+        </p>
+        <div class="d-flex flex-column gap-3 mb-6">
+          <div class="d-flex align-items-center gap-3">
+            <div style="width:24px;height:24px;border-radius:50%;background:rgba(16,185,129,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <i class="fa-solid fa-check" style="color:var(--color-success);font-size:11px;"></i>
+            </div>
+            <span style="color:var(--color-text-secondary);font-size:0.95rem;">Single sign-on across all modules</span>
+          </div>
+          <div class="d-flex align-items-center gap-3">
+            <div style="width:24px;height:24px;border-radius:50%;background:rgba(16,185,129,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <i class="fa-solid fa-check" style="color:var(--color-success);font-size:11px;"></i>
+            </div>
+            <span style="color:var(--color-text-secondary);font-size:0.95rem;">Real-time data sync between departments</span>
+          </div>
+          <div class="d-flex align-items-center gap-3">
+            <div style="width:24px;height:24px;border-radius:50%;background:rgba(16,185,129,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <i class="fa-solid fa-check" style="color:var(--color-success);font-size:11px;"></i>
+            </div>
+            <span style="color:var(--color-text-secondary);font-size:0.95rem;">Role-based access control at every level</span>
+          </div>
+          <div class="d-flex align-items-center gap-3">
+            <div style="width:24px;height:24px;border-radius:50%;background:rgba(16,185,129,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <i class="fa-solid fa-check" style="color:var(--color-success);font-size:11px;"></i>
+            </div>
+            <span style="color:var(--color-text-secondary);font-size:0.95rem;">Customizable workflows per institution</span>
+          </div>
+        </div>
+        <a href="modules.html" class="ss-btn ss-btn-primary">Explore All Modules <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="col-lg-7" data-aos="fade-left" data-aos-delay="150">
+        <div class="row g-3">
+          <div class="col-6 col-md-4"><div class="ss-module-card" style="flex-direction:column;text-align:center;padding:1.25rem;">
+            <div class="ss-module-icon" style="margin:0 auto 0.75rem;"><i class="fa-solid fa-book-open"></i></div>
+            <div style="font-size:0.8rem;font-weight:600;color:var(--color-text-secondary);">Academics</div>
+          </div></div>
+          <div class="col-6 col-md-4"><div class="ss-module-card" style="flex-direction:column;text-align:center;padding:1.25rem;">
+            <div class="ss-module-icon" style="margin:0 auto 0.75rem;background:linear-gradient(135deg,#10B981,#059669);"><i class="fa-solid fa-coins"></i></div>
+            <div style="font-size:0.8rem;font-weight:600;color:var(--color-text-secondary);">Finance</div>
+          </div></div>
+          <div class="col-6 col-md-4"><div class="ss-module-card" style="flex-direction:column;text-align:center;padding:1.25rem;">
+            <div class="ss-module-icon" style="margin:0 auto 0.75rem;background:linear-gradient(135deg,#8B5CF6,#7C3AED);"><i class="fa-solid fa-users"></i></div>
+            <div style="font-size:0.8rem;font-weight:600;color:var(--color-text-secondary);">HR & Payroll</div>
+          </div></div>
+          <div class="col-6 col-md-4"><div class="ss-module-card" style="flex-direction:column;text-align:center;padding:1.25rem;">
+            <div class="ss-module-icon" style="margin:0 auto 0.75rem;background:linear-gradient(135deg,#F59E0B,#D97706);"><i class="fa-solid fa-door-open"></i></div>
+            <div style="font-size:0.8rem;font-weight:600;color:var(--color-text-secondary);">Admissions</div>
+          </div></div>
+          <div class="col-6 col-md-4"><div class="ss-module-card" style="flex-direction:column;text-align:center;padding:1.25rem;">
+            <div class="ss-module-icon" style="margin:0 auto 0.75rem;background:linear-gradient(135deg,#EF4444,#DC2626);"><i class="fa-solid fa-file-pen"></i></div>
+            <div style="font-size:0.8rem;font-weight:600;color:var(--color-text-secondary);">Examinations</div>
+          </div></div>
+          <div class="col-6 col-md-4"><div class="ss-module-card" style="flex-direction:column;text-align:center;padding:1.25rem;">
+            <div class="ss-module-icon" style="margin:0 auto 0.75rem;background:linear-gradient(135deg,#06B6D4,#0284C7);"><i class="fa-solid fa-calendar-check"></i></div>
+            <div style="font-size:0.8rem;font-weight:600;color:var(--color-text-secondary);">Attendance</div>
+          </div></div>
+          <div class="col-6 col-md-4"><div class="ss-module-card" style="flex-direction:column;text-align:center;padding:1.25rem;">
+            <div class="ss-module-icon" style="margin:0 auto 0.75rem;background:linear-gradient(135deg,#EC4899,#DB2777);"><i class="fa-solid fa-comments"></i></div>
+            <div style="font-size:0.8rem;font-weight:600;color:var(--color-text-secondary);">Communication</div>
+          </div></div>
+          <div class="col-6 col-md-4"><div class="ss-module-card" style="flex-direction:column;text-align:center;padding:1.25rem;">
+            <div class="ss-module-icon" style="margin:0 auto 0.75rem;background:linear-gradient(135deg,#14B8A6,#0D9488);"><i class="fa-solid fa-id-card"></i></div>
+            <div style="font-size:0.8rem;font-weight:600;color:var(--color-text-secondary);">ID Cards</div>
+          </div></div>
+          <div class="col-6 col-md-4"><div class="ss-module-card" style="flex-direction:column;text-align:center;padding:1.25rem;">
+            <div class="ss-module-icon" style="margin:0 auto 0.75rem;background:linear-gradient(135deg,#A78BFA,#7C3AED);"><i class="fa-solid fa-chart-line"></i></div>
+            <div style="font-size:0.8rem;font-weight:600;color:var(--color-text-secondary);">Analytics</div>
+          </div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES HIGHLIGHT -->
+<section class="ss-section ss-section-surface">
+  <div class="ss-container">
+    <div class="ss-section-header" data-aos="fade-up">
+      <span class="ss-overline">Why SchoolSyntaxERP</span>
+      <h2>Built for institutions that demand <span class="text-gradient">excellence</span></h2>
+      <p>We built SchoolSyntaxERP the way enterprise software should be built — with serious architecture, uncompromising security, and the operational depth modern institutions require.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="ss-card h-100">
+          <div class="ss-feature-icon"><i class="fa-solid fa-layer-group"></i></div>
+          <h4 class="mb-3">True Multi-Tenancy</h4>
+          <p style="color:var(--color-text-muted);font-size:0.9rem;line-height:1.7;">Each institution operates in a fully isolated tenant context. Separate data, separate configurations, separate domains — one platform. No data leakage, ever.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="ss-card h-100">
+          <div class="ss-feature-icon" style="background:linear-gradient(135deg,#10B981,#059669);"><i class="fa-solid fa-shield-halved"></i></div>
+          <h4 class="mb-3">Enterprise Security</h4>
+          <p style="color:var(--color-text-muted);font-size:0.9rem;line-height:1.7;">Role-based access control, audit logging, session management, encrypted data at rest and in transit. Your institution's data is protected by multiple layers of security.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="ss-card h-100">
+          <div class="ss-feature-icon" style="background:linear-gradient(135deg,#F59E0B,#D97706);"><i class="fa-solid fa-bolt"></i></div>
+          <h4 class="mb-3">Intelligent Automation</h4>
+          <p style="color:var(--color-text-muted);font-size:0.9rem;line-height:1.7;">Automated fee reminders, attendance alerts, payroll processing, report generation, and communication workflows. Reduce manual work by up to 70%.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="ss-card h-100">
+          <div class="ss-feature-icon" style="background:linear-gradient(135deg,#8B5CF6,#7C3AED);"><i class="fa-solid fa-chart-bar"></i></div>
+          <h4 class="mb-3">Real-Time Analytics</h4>
+          <p style="color:var(--color-text-muted);font-size:0.9rem;line-height:1.7;">Executive dashboards, custom reports, enrollment trends, financial summaries, and attendance analytics give leadership the visibility to make data-driven decisions.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="ss-card h-100">
+          <div class="ss-feature-icon" style="background:linear-gradient(135deg,#06B6D4,#0284C7);"><i class="fa-solid fa-globe"></i></div>
+          <h4 class="mb-3">Custom Domains</h4>
+          <p style="color:var(--color-text-muted);font-size:0.9rem;line-height:1.7;">Each institution gets its own branded subdomain or custom domain with automatic SSL. Your parents and students see your institution's branding — not ours.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="ss-card h-100">
+          <div class="ss-feature-icon" style="background:linear-gradient(135deg,#EC4899,#DB2777);"><i class="fa-solid fa-headset"></i></div>
+          <h4 class="mb-3">World-Class Support</h4>
+          <p style="color:var(--color-text-muted);font-size:0.9rem;line-height:1.7;">Dedicated onboarding specialists, comprehensive documentation, priority ticket handling, and optional 24/7 enterprise support. We're with you every step of the way.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- PHOTO GALLERY -->
+<section class="ss-section ss-section-light-alt">
+  <div class="ss-container">
+    <div class="ss-section-header" data-aos="fade-up">
+      <span class="ss-overline">Real World Impact</span>
+      <h2>Transforming Education <span class="text-gradient">Worldwide</span></h2>
+      <p>From rural primary schools to urban universities — SchoolSyntaxERP powers institutions across 30+ countries.</p>
+    </div>
+    <div class="ss-gallery-grid" data-aos="fade-up" data-aos-delay="100">
+      <div class="ss-gallery-item ss-gallery-wide">
+        <img src="https://picsum.photos/seed/students001/800/480" alt="Students collaborating in a modern classroom" loading="lazy">
+        <div class="ss-gallery-caption">Collaborative Learning</div>
+      </div>
+      <div class="ss-gallery-item ss-gallery-tall">
+        <img src="https://picsum.photos/seed/campus002/400/540" alt="University campus" loading="lazy">
+        <div class="ss-gallery-caption">Modern Campuses</div>
+      </div>
+      <div class="ss-gallery-item">
+        <img src="https://picsum.photos/seed/tech003/400/260" alt="Student using digital devices" loading="lazy">
+        <div class="ss-gallery-caption">Digital First</div>
+      </div>
+      <div class="ss-gallery-item">
+        <img src="https://picsum.photos/seed/teach004/400/260" alt="Teacher with students" loading="lazy">
+        <div class="ss-gallery-caption">Expert Educators</div>
+      </div>
+      <div class="ss-gallery-item ss-gallery-wide">
+        <img src="https://picsum.photos/seed/grad005/800/260" alt="Graduation ceremony" loading="lazy">
+        <div class="ss-gallery-caption">Student Achievement</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="ss-section ss-section-surface">
+  <div class="ss-container">
+    <div class="ss-section-header" data-aos="fade-up">
+      <span class="ss-overline">Customer Stories</span>
+      <h2>Institutions that <span class="text-gradient">transformed</span> with SchoolSyntaxERP</h2>
+      <p>Don't take our word for it. Hear from the academic leaders who made the switch and never looked back.</p>
+    </div>
+    <div class="swiper ss-testimonials-swiper" data-aos="fade-up" data-aos-delay="100">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="ss-testimonial-card">
+            <div class="ss-testimonial-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="ss-testimonial-text">"We run a network of 12 schools across three counties. SchoolSyntaxERP gave us centralised visibility we never had before. The multi-tenant architecture means each school feels like they have their own system, while we get the bird's eye view we need as a network."</p>
+            <div class="ss-testimonial-author">
+              <img class="ss-testimonial-avatar-img" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Amara Ndiaye">
+              <div>
+                <div class="ss-testimonial-name">Amara Ndiaye</div>
+                <div class="ss-testimonial-role">Group Director, Brightstone Schools Network</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="ss-testimonial-card">
+            <div class="ss-testimonial-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="ss-testimonial-text">"Our finance team was spending two weeks every term manually generating invoices and chasing payments. With SchoolSyntaxERP, automated billing alone saved us over 40 staff-hours per month. The ROI was clear within the first term."</p>
+            <div class="ss-testimonial-author">
+              <img class="ss-testimonial-avatar-img" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Dr. Michael Obi">
+              <div>
+                <div class="ss-testimonial-name">Dr. Michael Obi</div>
+                <div class="ss-testimonial-role">Vice Chancellor, Nexus University</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="ss-testimonial-card">
+            <div class="ss-testimonial-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <p class="ss-testimonial-text">"Implementation was surprisingly smooth. The onboarding team walked us through every configuration. Within three days, our entire staff were onboarded and we processed our first batch of results using the system. Exceptional product, exceptional support."</p>
+            <div class="ss-testimonial-author">
+              <img class="ss-testimonial-avatar-img" src="https://randomuser.me/api/portraits/women/68.jpg" alt="Sarah Kimani">
+              <div>
+                <div class="ss-testimonial-name">Sarah Kimani</div>
+                <div class="ss-testimonial-role">Principal, Horizon Polytechnic</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="ss-testimonial-card">
+            <div class="ss-testimonial-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="ss-testimonial-text">"The parent communication module alone transformed our parent-school relationship. We send weekly academic updates, attendance alerts, and fee reminders automatically. Parents now rate our communication as 'excellent' in every survey we run."</p>
+            <div class="ss-testimonial-author">
+              <img class="ss-testimonial-avatar-img" src="https://randomuser.me/api/portraits/men/45.jpg" alt="James Mutua">
+              <div>
+                <div class="ss-testimonial-name">James Mutua</div>
+                <div class="ss-testimonial-role">Head Teacher, Greenfield Academy</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination mt-4" style="position:relative;margin-top:2rem;"></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING PREVIEW -->
+<section class="ss-section ss-section-dark">
+  <div class="ss-container">
+    <div class="ss-section-header" data-aos="fade-up">
+      <span class="ss-overline">Transparent Pricing</span>
+      <h2>Plans that grow <span class="text-gradient">with your institution</span></h2>
+      <p>From a single-campus school to a nationwide education network, we have a plan that fits. No hidden fees. No surprises.</p>
+    </div>
+    <div class="row g-4 justify-content-center" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-md-4 col-lg-3">
+        <div class="ss-pricing-card h-100">
+          <div class="ss-pricing-tier">Starter</div>
+          <div class="ss-pricing-price"><sup>$</sup>29</div>
+          <div class="ss-pricing-period">per month / up to 300 students</div>
+          <div class="ss-pricing-features">
+            <div class="ss-pricing-feature"><i class="fa-solid fa-check-circle"></i> Core academic modules</div>
+            <div class="ss-pricing-feature"><i class="fa-solid fa-check-circle"></i> Basic attendance tracking</div>
+            <div class="ss-pricing-feature"><i class="fa-solid fa-check-circle"></i> Fee management</div>
+            <div class="ss-pricing-feature"><i class="fa-solid fa-check-circle"></i> Email support</div>
+          </div>
+          <a href="pricing.html" class="ss-btn ss-btn-outline w-100">Get Started</a>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-3">
+        <div class="ss-pricing-card ss-pricing-card-popular h-100">
+          <div class="ss-popular-badge">Most Popular</div>
+          <div class="ss-pricing-tier">Professional</div>
+          <div class="ss-pricing-price"><sup>$</sup>149</div>
+          <div class="ss-pricing-period">per month / up to 2,000 students</div>
+          <div class="ss-pricing-features">
+            <div class="ss-pricing-feature"><i class="fa-solid fa-check-circle"></i> All 25+ modules</div>
+            <div class="ss-pricing-feature"><i class="fa-solid fa-check-circle"></i> HR & Payroll module</div>
+            <div class="ss-pricing-feature"><i class="fa-solid fa-check-circle"></i> Custom domain + SSL</div>
+            <div class="ss-pricing-feature"><i class="fa-solid fa-check-circle"></i> SMS & email automation</div>
+            <div class="ss-pricing-feature"><i class="fa-solid fa-check-circle"></i> Priority support</div>
+          </div>
+          <a href="pricing.html" class="ss-btn ss-btn-primary w-100">Get Started</a>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-3">
+        <div class="ss-pricing-card h-100">
+          <div class="ss-pricing-tier">Enterprise</div>
+          <div class="ss-pricing-price" style="font-size:2rem;">Custom</div>
+          <div class="ss-pricing-period">Unlimited students &amp; campuses</div>
+          <div class="ss-pricing-features">
+            <div class="ss-pricing-feature"><i class="fa-solid fa-check-circle"></i> Dedicated infrastructure</div>
+            <div class="ss-pricing-feature"><i class="fa-solid fa-check-circle"></i> Custom integrations</div>
+            <div class="ss-pricing-feature"><i class="fa-solid fa-check-circle"></i> SLA guarantees</div>
+            <div class="ss-pricing-feature"><i class="fa-solid fa-check-circle"></i> 24/7 dedicated support</div>
+          </div>
+          <a href="contact.html" class="ss-btn ss-btn-outline w-100">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-5" data-aos="fade-up">
+      <a href="pricing.html" style="color:var(--color-primary-light);font-size:0.9rem;">View full pricing & feature comparison <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- SECURITY STRIP -->
+<section class="ss-section-surface ss-section-sm">
+  <div class="ss-container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="ss-overline">Security You Can Trust</span>
+      <h3>Enterprise-grade protection, built in from day one</h3>
+    </div>
+    <div class="d-flex flex-wrap justify-content-center gap-3" data-aos="fade-up" data-aos-delay="100">
+      <div class="ss-security-pill"><i class="fa-solid fa-lock"></i> SSL / TLS Encrypted</div>
+      <div class="ss-security-pill"><i class="fa-solid fa-user-shield"></i> Role-Based Access Control</div>
+      <div class="ss-security-pill"><i class="fa-solid fa-clipboard-list"></i> Full Audit Logs</div>
+      <div class="ss-security-pill"><i class="fa-solid fa-database"></i> Encrypted at Rest</div>
+      <div class="ss-security-pill"><i class="fa-solid fa-shield-check"></i> SOC 2 Aligned</div>
+      <div class="ss-security-pill"><i class="fa-solid fa-earth-africa"></i> GDPR Ready</div>
+      <div class="ss-security-pill"><i class="fa-solid fa-server"></i> Daily Backups</div>
+      <div class="ss-security-pill"><i class="fa-solid fa-network-wired"></i> DDoS Protection</div>
+    </div>
+    <div class="text-center mt-5" data-aos="fade-up">
+      <a href="security.html" class="ss-btn ss-btn-dark">Read Our Security Documentation <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="ss-cta-section">
+  <div class="ss-container ss-cta-inner">
+    <div data-aos="zoom-in">
+      <span class="ss-overline ss-overline-light mb-4 d-block">Transform Your Institution Today</span>
+      <h2 class="text-display-md text-white mb-4 ss-hero-text-md">
+        Ready to bring order, efficiency, and growth to your institution?
+      </h2>
+      <p class="ss-cta-lead">
+        Join 500+ institutions that trusted SchoolSyntaxERP to modernize their operations. Get started with a free personalized demo today.
+      </p>
+      <div class="d-flex flex-wrap gap-3 justify-content-center">
+        <a href="demo.html" class="ss-btn ss-btn-light ss-btn-xl">
+          <i class="fa-solid fa-calendar-check"></i> Book Your Free Demo
+        </a>
+        <a href="pricing.html" class="ss-btn ss-btn-outline ss-btn-xl ss-btn-outline-white">
+          <i class="fa-solid fa-tags"></i> View Pricing
+        </a>
+      </div>
+      <p class="ss-text-xs-faint mt-3">
+        No credit card required &bull; Free 30-day trial &bull; Cancel anytime
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="ss-footer">
+  <div class="ss-container">
+    <div class="ss-footer-main">
+      <a href="index.html" class="ss-logo">
+        <div class="ss-logo-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+        <span class="ss-logo-text">School<span>Syntax</span>ERP</span>
+      </a>
+      <nav class="ss-footer-nav" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="features.html">Features</a>
+        <a href="modules.html">Modules</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="demo.html">Demo</a>
+      </nav>
+      <div class="ss-footer-social">
+        <a href="#" aria-label="Follow us on X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="Follow us on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://wa.me/255789236338" aria-label="Chat on WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="ss-footer-bar">
+      <p>&copy; 2026 SchoolSyntaxERP &bull; Founded by Mr Collins Prosper Kombe</p>
+      <div class="ss-footer-bar-links">
+        <a href="privacy-policy.html">Privacy</a>
+        <a href="terms-of-service.html">Terms</a>
+        <a href="sitemap.xml">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to Top -->
+<a href="https://wa.me/255789236338" class="ss-whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp"><div class="ss-wa-pulse"></div><i class="fa-brands fa-whatsapp"></i><span class="ss-wa-tooltip">Chat on WhatsApp</span></a>
+<button type="button" class="ss-back-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<!-- Cookie Consent Banner -->
+<div class="ss-cookie-banner" id="cookie-banner">
+  <div class="ss-cookie-text">
+    <strong>We use cookies</strong> to enhance your experience, analyze site traffic, and personalize content. By clicking "Accept", you consent to our use of cookies as described in our <a href="privacy-policy.html">Privacy Policy</a>.
+  </div>
+  <div class="ss-cookie-actions">
+    <button id="cookie-reject" class="ss-btn ss-btn-ghost ss-btn-sm">Decline</button>
+    <button id="cookie-accept" class="ss-btn ss-btn-primary ss-btn-sm">Accept All</button>
+  </div>
+</div>
+
+<!-- Video Modal -->
+<div class="ss-modal-overlay" id="video-modal">
+  <div class="ss-modal-box" style="max-width:700px;">
+    <div class="ss-modal-header">
+      <span style="font-weight:600;color:var(--color-text-primary);">Platform Demo</span>
+      <button class="ss-modal-close" aria-label="Close"><i class="fa-solid fa-times"></i></button>
+    </div>
+    <div class="ss-video-wrap"></div>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/charts.js"></script>
+<!-- Google Translate -->
+<script>
+function googleTranslateElementInit(){
+  new google.translate.TranslateElement({
+    pageLanguage:'en',
+    layout:google.translate.TranslateElement.InlineLayout.SIMPLE
+  },'google_translate_element');
+}
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async defer></script>
+</body>
+</html>

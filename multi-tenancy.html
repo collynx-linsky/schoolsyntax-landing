@@ -1,0 +1,217 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-Tenancy — SchoolSyntaxERP | Built for Scale, Designed for Isolation</title>
+  <meta name="description" content="SchoolSyntaxERP's multi-tenant architecture ensures complete data isolation between institutions while sharing infrastructure. Learn how it works.">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script>(function(){var t=localStorage.getItem('ss-theme');if(t)document.documentElement.setAttribute('data-theme',t);})();</script>
+</head>
+<body>
+<div class="ss-scroll-progress"></div>
+<nav class="ss-navbar" id="navbar">
+  <div class="ss-navbar-inner">
+    <a href="index.html" class="ss-logo"><div class="ss-logo-icon"><i class="fa-solid fa-graduation-cap"></i></div><span class="ss-logo-text">School<span>Syntax</span>ERP</span></a>
+    <div class="ss-nav-links">
+      <a href="index.html" class="ss-nav-link">Home</a>
+      <div class="ss-nav-item">
+        <a href="features.html" class="ss-nav-link">Features <i class="fa-solid fa-chevron-down chevron"></i></a>
+        <div class="ss-dropdown ss-dropdown-wide">
+          <a href="features.html" class="ss-dropdown-item"><div class="ss-dropdown-item-icon"><i class="fa-solid fa-stars"></i></div><div class="ss-dropdown-item-text"><strong>Features Overview</strong><span>All platform capabilities</span></div></a>
+          <a href="security.html" class="ss-dropdown-item"><div class="ss-dropdown-item-icon"><i class="fa-solid fa-shield-halved"></i></div><div class="ss-dropdown-item-text"><strong>Security</strong><span>Enterprise-grade protection</span></div></a>
+          <a href="multi-tenancy.html" class="ss-dropdown-item"><div class="ss-dropdown-item-icon"><i class="fa-solid fa-layer-group"></i></div><div class="ss-dropdown-item-text"><strong>Multi-Tenancy</strong><span>Isolated tenant architecture</span></div></a>
+          <a href="platform-admin.html" class="ss-dropdown-item"><div class="ss-dropdown-item-icon"><i class="fa-solid fa-sliders"></i></div><div class="ss-dropdown-item-text"><strong>Platform Admin</strong><span>Total platform control</span></div></a>
+        </div>
+      </div>
+      <div class="ss-nav-item">
+        <a href="modules.html" class="ss-nav-link">Modules <i class="fa-solid fa-chevron-down chevron"></i></a>
+        <div class="ss-dropdown ss-dropdown-wide">
+          <a href="modules.html#academics" class="ss-dropdown-item"><div class="ss-dropdown-item-icon"><i class="fa-solid fa-book-open"></i></div><div class="ss-dropdown-item-text"><strong>Academics</strong><span>Classes, timetables, curriculum</span></div></a>
+          <a href="modules.html#admissions" class="ss-dropdown-item"><div class="ss-dropdown-item-icon"><i class="fa-solid fa-door-open"></i></div><div class="ss-dropdown-item-text"><strong>Admissions</strong><span>Online applications &amp; intake</span></div></a>
+          <a href="modules.html#finance" class="ss-dropdown-item"><div class="ss-dropdown-item-icon"><i class="fa-solid fa-coins"></i></div><div class="ss-dropdown-item-text"><strong>Finance &amp; Billing</strong><span>Fees, invoices, payments</span></div></a>
+          <a href="modules.html#hr" class="ss-dropdown-item"><div class="ss-dropdown-item-icon"><i class="fa-solid fa-users"></i></div><div class="ss-dropdown-item-text"><strong>HR &amp; Payroll</strong><span>Staff management &amp; payslips</span></div></a>
+          <a href="modules.html#exams" class="ss-dropdown-item"><div class="ss-dropdown-item-icon"><i class="fa-solid fa-file-pen"></i></div><div class="ss-dropdown-item-text"><strong>Examinations</strong><span>Results, grading, reports</span></div></a>
+          <a href="modules.html#attendance" class="ss-dropdown-item"><div class="ss-dropdown-item-icon"><i class="fa-solid fa-calendar-check"></i></div><div class="ss-dropdown-item-text"><strong>Attendance</strong><span>Daily tracking &amp; analytics</span></div></a>
+          <a href="modules.html#communication" class="ss-dropdown-item"><div class="ss-dropdown-item-icon"><i class="fa-solid fa-comments"></i></div><div class="ss-dropdown-item-text"><strong>Communication</strong><span>SMS, email &amp; announcements</span></div></a>
+          <a href="modules.html#analytics" class="ss-dropdown-item"><div class="ss-dropdown-item-icon"><i class="fa-solid fa-chart-line"></i></div><div class="ss-dropdown-item-text"><strong>Analytics</strong><span>Insights &amp; dashboards</span></div></a>
+        </div>
+      </div>
+      <a href="pricing.html" class="ss-nav-link">Pricing</a>
+      <a href="gallery.html" class="ss-nav-link">Gallery</a>
+      <div class="ss-nav-item">
+        <a href="about.html" class="ss-nav-link">Company <i class="fa-solid fa-chevron-down chevron"></i></a>
+        <div class="ss-dropdown">
+          <a href="about.html" class="ss-dropdown-item"><div class="ss-dropdown-item-icon"><i class="fa-solid fa-building"></i></div><div class="ss-dropdown-item-text"><strong>About Us</strong><span>Our story &amp; mission</span></div></a>
+          <a href="blog.html" class="ss-dropdown-item"><div class="ss-dropdown-item-icon"><i class="fa-solid fa-newspaper"></i></div><div class="ss-dropdown-item-text"><strong>Blog</strong><span>EdTech insights</span></div></a>
+          <a href="careers.html" class="ss-dropdown-item"><div class="ss-dropdown-item-icon"><i class="fa-solid fa-briefcase"></i></div><div class="ss-dropdown-item-text"><strong>Careers</strong><span>Join our team</span></div></a>
+          <a href="contact.html" class="ss-dropdown-item"><div class="ss-dropdown-item-icon"><i class="fa-solid fa-envelope"></i></div><div class="ss-dropdown-item-text"><strong>Contact</strong><span>Get in touch</span></div></a>
+        </div>
+      </div>
+    </div>
+    <div class="ss-nav-actions"><div id="google_translate_element" class="ss-translate d-none d-xl-inline-flex"></div><button class="ss-theme-toggle" aria-label="Switch to dark mode"><i class="ss-theme-icon fa-solid fa-moon"></i></button><a href="demo.html" class="ss-btn ss-btn-primary ss-btn-sm">Request Demo</a><button class="ss-hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button></div>
+  </div>
+</nav>
+<div class="ss-mobile-menu"><a href="index.html" class="ss-mobile-nav-link">Home</a><a href="features.html" class="ss-mobile-nav-link">Features</a><a href="pricing.html" class="ss-mobile-nav-link">Pricing</a><a href="gallery.html" class="ss-mobile-nav-link">Gallery</a><div class="ss-mobile-cta"><a href="demo.html" class="ss-btn ss-btn-primary ss-btn-block">Request Demo</a></div></div>
+
+<section class="ss-page-hero">
+  <div class="ss-container">
+    <div class="ss-hero-text-wide" data-aos="fade-up">
+      <span class="ss-overline">Multi-Tenant Architecture</span>
+      <h1 class="text-display-lg mb-4">Built for Scale. <span class="text-gradient">Designed for Isolation.</span></h1>
+      <p class="ss-lead">One platform. Hundreds of institutions. Zero data leakage. SchoolSyntaxERP's multi-tenancy architecture sets the standard for institutional data isolation in educational software.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT IS MULTI-TENANCY -->
+<section class="ss-section ss-section-dark">
+  <div class="ss-container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6" data-aos="fade-right">
+        <span class="ss-overline">The Architecture</span>
+        <h2 class="mb-4">What makes our multi-tenancy <span class="text-gradient">different</span></h2>
+        <p style="color:var(--color-text-muted);line-height:1.8;margin-bottom:1.25rem;">Most "multi-tenant" software just means multiple users share the same database tables with a simple filter on an "institution_id" column. If the filter is ever missed — even once — data bleeds between institutions. That's unacceptable for education data.</p>
+        <p style="color:var(--color-text-muted);line-height:1.8;margin-bottom:1.25rem;">SchoolSyntaxERP uses a <strong>thread-local tenant context</strong> approach enforced at the application middleware layer. Every database query automatically inherits the correct tenant context. Tenant isolation is structural — it cannot be bypassed by a developer mistake.</p>
+        <p style="color:var(--color-text-muted);line-height:1.8;">Additionally, we enforce <strong>institution-scoped unique constraints</strong> at the database level, ensuring that even if the application layer were somehow bypassed, the database would reject cross-tenant data contamination.</p>
+      </div>
+      <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
+        <div class="ss-tenant-diagram" style="grid-template-columns:repeat(3,1fr);gap:1rem;">
+          <div class="ss-tenant-box">
+            <div class="ss-tenant-box-icon"><i class="fa-solid fa-school"></i></div>
+            <div class="ss-tenant-box-name">Greenfield Academy</div>
+            <div class="ss-tenant-box-data">
+              <div class="ss-tenant-data-row"></div>
+              <div class="ss-tenant-data-row"></div>
+              <div class="ss-tenant-data-row"></div>
+            </div>
+          </div>
+          <div class="ss-tenant-box" style="border-color:rgba(16,185,129,0.3);">
+            <div class="ss-tenant-box-icon" style="background:linear-gradient(135deg,#10B981,#059669);"><i class="fa-solid fa-university"></i></div>
+            <div class="ss-tenant-box-name">Nexus University</div>
+            <div class="ss-tenant-box-data">
+              <div class="ss-tenant-data-row" style="background:rgba(16,185,129,0.2);"></div>
+              <div class="ss-tenant-data-row" style="background:rgba(16,185,129,0.2);"></div>
+              <div class="ss-tenant-data-row" style="background:rgba(16,185,129,0.2);"></div>
+            </div>
+          </div>
+          <div class="ss-tenant-box" style="border-color:rgba(245,158,11,0.3);">
+            <div class="ss-tenant-box-icon" style="background:linear-gradient(135deg,#F59E0B,#D97706);"><i class="fa-solid fa-building-columns"></i></div>
+            <div class="ss-tenant-box-name">Horizon Poly</div>
+            <div class="ss-tenant-box-data">
+              <div class="ss-tenant-data-row" style="background:rgba(245,158,11,0.2);"></div>
+              <div class="ss-tenant-data-row" style="background:rgba(245,158,11,0.2);"></div>
+              <div class="ss-tenant-data-row" style="background:rgba(245,158,11,0.2);"></div>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center;margin:1.5rem 0;display:flex;align-items:center;justify-content:center;gap:1rem;">
+          <div style="flex:1;height:1px;background:var(--color-border);"></div>
+          <div style="background:rgba(99,102,241,0.15);border:1px solid var(--color-border);border-radius:8px;padding:0.5rem 1rem;font-size:0.8rem;color:var(--color-text-muted);">Complete Isolation — No Data Sharing</div>
+          <div style="flex:1;height:1px;background:var(--color-border);"></div>
+        </div>
+        <div style="background:rgba(99,102,241,0.06);border:1px solid var(--color-border);border-radius:12px;padding:1.25rem;text-align:center;">
+          <div style="font-size:0.75rem;color:var(--color-text-faint);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.5rem;">Shared Infrastructure</div>
+          <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
+            <span style="font-size:0.8rem;color:var(--color-text-muted);background:rgba(255,255,255,0.04);border:1px solid var(--color-border);padding:0.25rem 0.75rem;border-radius:4px;">Application Servers</span>
+            <span style="font-size:0.8rem;color:var(--color-text-muted);background:rgba(255,255,255,0.04);border:1px solid var(--color-border);padding:0.25rem 0.75rem;border-radius:4px;">Database Cluster</span>
+            <span style="font-size:0.8rem;color:var(--color-text-muted);background:rgba(255,255,255,0.04);border:1px solid var(--color-border);padding:0.25rem 0.75rem;border-radius:4px;">Object Storage</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="ss-section ss-section-surface">
+  <div class="ss-container">
+    <div class="ss-section-header" data-aos="fade-up">
+      <span class="ss-overline">What You Get</span>
+      <h2>Multi-tenancy features that <span class="text-gradient">matter</span></h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0"><div class="ss-card h-100"><div class="ss-feature-icon-outline"><i class="fa-solid fa-database"></i></div><h4 class="mb-2">Institution-Scoped Data</h4><p class="ss-timeline-body">Every record in the system — students, staff, fees, results, attendance — is cryptographically bound to its owning institution. Cross-tenant queries are structurally impossible.</p></div></div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100"><div class="ss-card h-100"><div class="ss-feature-icon-outline" style="color:var(--color-secondary);"><i class="fa-solid fa-sliders"></i></div><h4 class="mb-2">Independent Configuration</h4><p class="ss-timeline-body">Each institution configures its own academic calendar, fee structures, grading system, communication templates, and branding independently of every other tenant on the platform.</p></div></div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200"><div class="ss-card h-100"><div class="ss-feature-icon-outline" style="color:var(--color-accent);"><i class="fa-solid fa-globe"></i></div><h4 class="mb-2">Custom Domains</h4><p class="ss-timeline-body">Each institution gets a branded subdomain (academy.schoolsyntaxerp.com) or can bring their own domain (erp.greenfield.edu). SSL is provisioned and renewed automatically.</p></div></div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0"><div class="ss-card h-100"><div class="ss-feature-icon-outline" style="color:var(--color-success);"><i class="fa-solid fa-shield-check"></i></div><h4 class="mb-2">Platform Governance</h4><p class="ss-timeline-body">The Platform Administrator (network operator or SaaS admin) can manage all tenants from a single governance dashboard — subscriptions, billing, quotas, impersonation for support — without accessing tenant data.</p></div></div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100"><div class="ss-card h-100"><div class="ss-feature-icon-outline" style="color:var(--color-warning);"><i class="fa-solid fa-chart-network"></i></div><h4 class="mb-2">Multi-Campus Support</h4><p class="ss-timeline-body">Enterprise plans support multi-campus configurations where sub-institutions share a parent tenant. Each campus manages its own data while leadership gets a consolidated view across all campuses.</p></div></div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200"><div class="ss-card h-100"><div class="ss-feature-icon-outline"><i class="fa-solid fa-magnifying-glass"></i></div><h4 class="mb-2">Audit Trail Per Tenant</h4><p class="ss-timeline-body">Every institution has its own immutable audit log. Institutions can view the complete history of all actions within their tenant, including any platform-level support access.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- USE CASES -->
+<section class="ss-section ss-section-dark">
+  <div class="ss-container">
+    <div class="ss-section-header" data-aos="fade-up">
+      <span class="ss-overline">Use Cases</span>
+      <h2>Who benefits from our <span class="text-gradient">multi-tenancy</span></h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0"><div class="ss-industry-card h-100"><div style="font-size:36px;margin-bottom:1rem;">🏫</div><h4 class="mb-3">School Chains &amp; Networks</h4><p style="color:var(--color-text-muted);font-size:0.9rem;line-height:1.7;margin-bottom:1rem;">Run 5, 20, or 200 schools from one platform. Each school has total independence while the network owner has full visibility and governance.</p><ul style="list-style:none;display:flex;flex-direction:column;gap:0.4rem;"><li style="font-size:0.82rem;color:var(--color-text-muted);"><i class="fa-solid fa-arrow-right" style="color:var(--color-primary);margin-right:6px;font-size:10px;"></i>Consolidated reporting across all schools</li><li style="font-size:0.82rem;color:var(--color-text-muted);"><i class="fa-solid fa-arrow-right" style="color:var(--color-primary);margin-right:6px;font-size:10px;"></i>Centralized billing management</li><li style="font-size:0.82rem;color:var(--color-text-muted);"><i class="fa-solid fa-arrow-right" style="color:var(--color-primary);margin-right:6px;font-size:10px;"></i>Shared templates &amp; standards</li></ul></div></div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100"><div class="ss-industry-card h-100"><div style="font-size:36px;margin-bottom:1rem;">🏛️</div><h4 class="mb-3">Government Education Portals</h4><p style="color:var(--color-text-muted);font-size:0.9rem;line-height:1.7;margin-bottom:1rem;">Deploy SchoolSyntaxERP as the national or county education management platform, with each school operating as an independent tenant.</p><ul style="list-style:none;display:flex;flex-direction:column;gap:0.4rem;"><li style="font-size:0.82rem;color:var(--color-text-muted);"><i class="fa-solid fa-arrow-right" style="color:var(--color-primary);margin-right:6px;font-size:10px;"></i>National enrollment &amp; performance analytics</li><li style="font-size:0.82rem;color:var(--color-text-muted);"><i class="fa-solid fa-arrow-right" style="color:var(--color-primary);margin-right:6px;font-size:10px;"></i>Standardized reporting to ministry</li><li style="font-size:0.82rem;color:var(--color-text-muted);"><i class="fa-solid fa-arrow-right" style="color:var(--color-primary);margin-right:6px;font-size:10px;"></i>School-level data sovereignty</li></ul></div></div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200"><div class="ss-industry-card h-100"><div style="font-size:36px;margin-bottom:1rem;">🎓</div><h4 class="mb-3">Multi-Campus Universities</h4><p style="color:var(--color-text-muted);font-size:0.9rem;line-height:1.7;margin-bottom:1rem;">Large universities with multiple faculties, departments, or satellite campuses can configure each as a sub-tenant with its own administration.</p><ul style="list-style:none;display:flex;flex-direction:column;gap:0.4rem;"><li style="font-size:0.82rem;color:var(--color-text-muted);"><i class="fa-solid fa-arrow-right" style="color:var(--color-primary);margin-right:6px;font-size:10px;"></i>Faculty-level independence</li><li style="font-size:0.82rem;color:var(--color-text-muted);"><i class="fa-solid fa-arrow-right" style="color:var(--color-primary);margin-right:6px;font-size:10px;"></i>Central registry &amp; finance view</li><li style="font-size:0.82rem;color:var(--color-text-muted);"><i class="fa-solid fa-arrow-right" style="color:var(--color-primary);margin-right:6px;font-size:10px;"></i>Unified student ID system</li></ul></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="ss-cta-section">
+  <div class="ss-container ss-cta-inner">
+    <div data-aos="zoom-in">
+      <h2 class="text-display-sm text-white mb-4">Running a network of institutions?</h2>
+      <p class="ss-cta-lead">Our enterprise team can walk you through exactly how the multi-tenant architecture would work for your specific organizational structure.</p>
+      <div class="d-flex gap-3 justify-content-center flex-wrap">
+        <a href="demo.html" class="ss-btn ss-btn-light ss-btn-lg"><i class="fa-solid fa-calendar-check"></i> Book a Demo</a>
+        <a href="contact.html" class="ss-btn ss-btn-outline ss-btn-lg ss-btn-outline-white">Talk to Enterprise Sales</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="ss-footer">
+  <div class="ss-container">
+    <div class="ss-footer-main">
+      <a href="index.html" class="ss-logo">
+        <div class="ss-logo-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+        <span class="ss-logo-text">School<span>Syntax</span>ERP</span>
+      </a>
+      <nav class="ss-footer-nav" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="features.html">Features</a>
+        <a href="modules.html">Modules</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="demo.html">Demo</a>
+      </nav>
+      <div class="ss-footer-social">
+        <a href="#" aria-label="Follow us on X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="Follow us on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://wa.me/255789236338" aria-label="Chat on WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="ss-footer-bar">
+      <p>&copy; 2026 SchoolSyntaxERP &bull; Founded by Mr Collins Prosper Kombe</p>
+      <div class="ss-footer-bar-links">
+        <a href="privacy-policy.html">Privacy</a>
+        <a href="terms-of-service.html">Terms</a>
+        <a href="sitemap.xml">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<a href="https://wa.me/255789236338" class="ss-whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp"><div class="ss-wa-pulse"></div><i class="fa-brands fa-whatsapp"></i><span class="ss-wa-tooltip">Chat on WhatsApp</span></a>
+<button type="button" class="ss-back-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="assets/js/main.js"></script>
+<script>function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:'en',layout:google.translate.TranslateElement.InlineLayout.SIMPLE},'google_translate_element');}</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async defer></script>
+</body>
+</html>

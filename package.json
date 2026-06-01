@@ -1,0 +1,14 @@
+{
+  "name": "schoolsyntax-erp-website",
+  "version": "1.0.0",
+  "description": "SchoolSyntaxERP — Enterprise Multi-Tenant ERP Platform for Educational Institutions",
+  "private": true,
+  "scripts": {
+    "start": "npx serve -l 3000",
+    "dev": "npx serve -l 3000",
+    "serve": "npx serve -l 3000"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

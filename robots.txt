@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Disallow admin and API paths if deployed
+Disallow: /platform/
+Disallow: /api/
+Disallow: /admin/
+
+# Sitemap
+Sitemap: https://www.schoolsyntaxerp.com/sitemap.xml
+
+# Crawl-delay for responsible bots
+Crawl-delay: 5

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery — SchoolSyntaxERP | Platform Screenshots &amp; Campus Photos</title>
+  <meta name="description" content="See SchoolSyntaxERP in action. Browse platform screenshots, module demos, and real photos from institutions using the system worldwide.">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script>(function(){var t=localStorage.getItem('ss-theme');if(t)document.documentElement.setAttribute('data-theme',t);})();</script>
+  <style>
+    .ss-gallery-filter { display:flex; flex-wrap:wrap; gap:.5rem; justify-content:center; margin-bottom:2.5rem; }
+    .ss-gallery-filter-btn {
+      padding:.45rem 1.1rem; font-size:.8rem; font-weight:600;
+      border:1px solid var(--color-border); border-radius:var(--radius-full);
+      background:transparent; color:var(--color-text-muted);
+      cursor:pointer; transition:var(--transition-base);
+    }
+    .ss-gallery-filter-btn:hover,
+    .ss-gallery-filter-btn.active {
+      background:rgba(79,70,229,.1); border-color:var(--color-primary); color:var(--color-primary);
+    }
+    .ss-gallery-category { font-size:.65rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase;
+      color:var(--color-primary); background:rgba(79,70,229,.08); padding:3px 10px;
+      border-radius:var(--radius-full); display:inline-block; margin-bottom:.75rem; }
+    /* Lightbox overlay */
+    .ss-lb { display:none; position:fixed; inset:0; background:rgba(0,0,0,.92);
+      z-index:900; align-items:center; justify-content:center; padding:1.5rem; }
+    .ss-lb.open { display:flex; }
+    .ss-lb img { max-width:min(90vw,960px); max-height:85vh; object-fit:contain;
+      border-radius:var(--radius-lg); box-shadow:0 20px 60px rgba(0,0,0,.6); }
+    .ss-lb-close { position:fixed; top:1.25rem; right:1.5rem; width:40px; height:40px;
+      background:rgba(255,255,255,.1); border:none; border-radius:50%; color:#fff;
+      font-size:1.2rem; cursor:pointer; display:flex; align-items:center; justify-content:center;
+      transition:background .2s; }
+    .ss-lb-close:hover { background:rgba(255,255,255,.2); }
+    .ss-gallery-card { cursor:zoom-in; }
+  </style>
+</head>
+<body>
+<div class="ss-scroll-progress"></div>
+
+<nav class="ss-navbar" id="navbar">
+  <div class="ss-navbar-inner">
+    <a href="index.html" class="ss-logo">
+      <div class="ss-logo-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+      <span class="ss-logo-text">School<span>Syntax</span>ERP</span>
+    </a>
+    <div class="ss-nav-links">
+      <a href="index.html" class="ss-nav-link">Home</a>
+      <div class="ss-nav-item">
+        <a href="features.html" class="ss-nav-link">Features <i class="fa-solid fa-chevron-down chevron"></i></a>
+        <div class="ss-dropdown ss-dropdown-wide">
+          <a href="features.html" class="ss-dropdown-item"><div class="ss-dropdown-item-icon"><i class="fa-solid fa-stars"></i></div><div class="ss-dropdown-item-text"><strong>Features Overview</strong><span>All platform capabilities</span></div></a>
+          <a href="security.html" class="ss-dropdown-item"><div class="ss-dropdown-item-icon"><i class="fa-solid fa-shield-halved"></i></div><div class="ss-dropdown-item-text"><strong>Security</strong><span>Enterprise-grade protection</span></div></a>
+          <a href="multi-tenancy.html" class="ss-dropdown-item"><div class="ss-dropdown-item-icon"><i class="fa-solid fa-layer-group"></i></div><div class="ss-dropdown-item-text"><strong>Multi-Tenancy</strong><span>Isolated tenant architecture</span></div></a>
+          <a href="platform-admin.html" class="ss-dropdown-item"><div class="ss-dropdown-item-icon"><i class="fa-solid fa-sliders"></i></div><div class="ss-dropdown-item-text"><strong>Platform Admin</strong><span>Total platform control</span></div></a>
+        </div>
+      </div>
+      <div class="ss-nav-item">
+        <a href="modules.html" class="ss-nav-link">Modules <i class="fa-solid fa-chevron-down chevron"></i></a>
+        <div class="ss-dropdown ss-dropdown-wide">
+          <a href="modules.html#academics" class="ss-dropdown-item"><div class="ss-dropdown-item-icon"><i class="fa-solid fa-book-open"></i></div><div class="ss-dropdown-item-text"><strong>Academics</strong><span>Classes, timetables, curriculum</span></div></a>
+          <a href="modules.html#admissions" class="ss-dropdown-item"><div class="ss-dropdown-item-icon"><i class="fa-solid fa-door-open"></i></div><div class="ss-dropdown-item-text"><strong>Admissions</strong><span>Online applications &amp; intake</span></div></a>
+          <a href="modules.html#finance" class="ss-dropdown-item"><div class="ss-dropdown-item-icon"><i class="fa-solid fa-coins"></i></div><div class="ss-dropdown-item-text"><strong>Finance &amp; Billing</strong><span>Fees, invoices, payments</span></div></a>
+          <a href="modules.html#hr" class="ss-dropdown-item"><div class="ss-dropdown-item-icon"><i class="fa-solid fa-users"></i></div><div class="ss-dropdown-item-text"><strong>HR &amp; Payroll</strong><span>Staff management &amp; payslips</span></div></a>
+          <a href="modules.html#exams" class="ss-dropdown-item"><div class="ss-dropdown-item-icon"><i class="fa-solid fa-file-pen"></i></div><div class="ss-dropdown-item-text"><strong>Examinations</strong><span>Results, grading, reports</span></div></a>
+          <a href="modules.html#attendance" class="ss-dropdown-item"><div class="ss-dropdown-item-icon"><i class="fa-solid fa-calendar-check"></i></div><div class="ss-dropdown-item-text"><strong>Attendance</strong><span>Daily tracking &amp; analytics</span></div></a>
+          <a href="modules.html#communication" class="ss-dropdown-item"><div class="ss-dropdown-item-icon"><i class="fa-solid fa-comments"></i></div><div class="ss-dropdown-item-text"><strong>Communication</strong><span>SMS, email &amp; announcements</span></div></a>
+          <a href="modules.html#analytics" class="ss-dropdown-item"><div class="ss-dropdown-item-icon"><i class="fa-solid fa-chart-line"></i></div><div class="ss-dropdown-item-text"><strong>Analytics</strong><span>Insights &amp; dashboards</span></div></a>
+        </div>
+      </div>
+      <a href="pricing.html" class="ss-nav-link">Pricing</a>
+      <a href="gallery.html" class="ss-nav-link active">Gallery</a>
+      <div class="ss-nav-item">
+        <a href="about.html" class="ss-nav-link">Company <i class="fa-solid fa-chevron-down chevron"></i></a>
+        <div class="ss-dropdown">
+          <a href="about.html" class="ss-dropdown-item"><div class="ss-dropdown-item-icon"><i class="fa-solid fa-building"></i></div><div class="ss-dropdown-item-text"><strong>About Us</strong><span>Our story &amp; mission</span></div></a>
+          <a href="blog.html" class="ss-dropdown-item"><div class="ss-dropdown-item-icon"><i class="fa-solid fa-newspaper"></i></div><div class="ss-dropdown-item-text"><strong>Blog</strong><span>EdTech insights</span></div></a>
+          <a href="careers.html" class="ss-dropdown-item"><div class="ss-dropdown-item-icon"><i class="fa-solid fa-briefcase"></i></div><div class="ss-dropdown-item-text"><strong>Careers</strong><span>Join our team</span></div></a>
+          <a href="contact.html" class="ss-dropdown-item"><div class="ss-dropdown-item-icon"><i class="fa-solid fa-envelope"></i></div><div class="ss-dropdown-item-text"><strong>Contact</strong><span>Get in touch</span></div></a>
+        </div>
+      </div>
+    </div>
+    <div class="ss-nav-actions">
+      <div id="google_translate_element" class="ss-translate d-none d-xl-inline-flex"></div>
+      <button class="ss-theme-toggle" aria-label="Switch to dark mode"><i class="ss-theme-icon fa-solid fa-moon"></i></button>
+      <a href="demo.html" class="ss-btn ss-btn-primary ss-btn-sm d-none d-lg-inline-flex">Request Demo</a>
+      <button class="ss-hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="ss-mobile-menu">
+  <a href="index.html" class="ss-mobile-nav-link">Home</a>
+  <a href="features.html" class="ss-mobile-nav-link">Features</a>
+  <a href="modules.html" class="ss-mobile-nav-link">Modules</a>
+  <a href="pricing.html" class="ss-mobile-nav-link">Pricing</a>
+  <a href="gallery.html" class="ss-mobile-nav-link active">Gallery</a>
+  <a href="about.html" class="ss-mobile-nav-link">About</a>
+  <a href="contact.html" class="ss-mobile-nav-link">Contact</a>
+  <div class="ss-mobile-cta">
+    <a href="demo.html" class="ss-btn ss-btn-primary ss-btn-block">Request Demo</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="ss-page-hero">
+  <div class="ss-container">
+    <div class="ss-hero-text" data-aos="fade-up">
+      <span class="ss-overline">Visual Tour</span>
+      <h1 class="text-display-md mb-3">Platform <span class="text-gradient">Gallery</span></h1>
+      <p class="ss-lead">Explore SchoolSyntaxERP through screenshots, module views, and real photos from institutions using the platform worldwide.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FILTER TABS -->
+<section class="ss-section-sm ss-section-surface">
+  <div class="ss-container">
+    <div class="ss-gallery-filter" role="group" aria-label="Filter gallery">
+      <button class="ss-gallery-filter-btn active" data-filter="all">All</button>
+      <button class="ss-gallery-filter-btn" data-filter="system">System Screenshots</button>
+      <button class="ss-gallery-filter-btn" data-filter="campus">Campus &amp; Students</button>
+      <button class="ss-gallery-filter-btn" data-filter="team">Our Team</button>
+    </div>
+  </div>
+</section>
+
+<!-- ── SYSTEM SCREENSHOTS ────────────────────────────────────── -->
+<section class="ss-section ss-section-light-alt" data-gallery-group="system">
+  <div class="ss-container">
+    <div class="ss-section-header" data-aos="fade-up">
+      <span class="ss-overline">The Platform</span>
+      <h2>System <span class="text-gradient">Screenshots</span></h2>
+      <p>Every view below reflects the live SchoolSyntaxERP interface — clean, fast, and purpose-built for educational institutions.</p>
+    </div>
+
+    <!-- Row 1: wide dashboard -->
+    <div class="ss-gallery-grid mb-4" data-aos="fade-up">
+      <div class="ss-gallery-item ss-gallery-wide ss-gallery-card" data-src="assets/photos/gallery/system/dashboard-overview.jpg" title="Dashboard Overview">
+        <img src="assets/photos/gallery/system/dashboard-overview.jpg" onerror="this.src='https://picsum.photos/seed/dash2026/800/480'" alt="SchoolSyntaxERP dashboard overview showing analytics, student metrics and fee collection" loading="lazy">
+        <div class="ss-gallery-caption"><i class="fa-solid fa-gauge"></i> Main Dashboard — Analytics Overview</div>
+      </div>
+      <div class="ss-gallery-item ss-gallery-card" data-src="assets/photos/gallery/system/academics-module.jpg" title="Academics Module">
+        <img src="assets/photos/gallery/system/academics-module.jpg" onerror="this.src='https://picsum.photos/seed/acad2026/400/480'" alt="Academic management timetable grid" loading="lazy">
+        <div class="ss-gallery-caption"><i class="fa-solid fa-book-open"></i> Academic Management</div>
+      </div>
+    </div>
+
+    <!-- Row 2: 3-col -->
+    <div class="ss-gallery-grid mb-4" data-aos="fade-up" data-aos-delay="100">
+      <div class="ss-gallery-item ss-gallery-card" data-src="assets/photos/gallery/system/finance-module.jpg" title="Finance Module">
+        <img src="assets/photos/gallery/system/finance-module.jpg" onerror="this.src='https://picsum.photos/seed/fin2026/400/280'" alt="Finance and billing fee collection report" loading="lazy">
+        <div class="ss-gallery-caption"><i class="fa-solid fa-coins"></i> Finance &amp; Billing</div>
+      </div>
+      <div class="ss-gallery-item ss-gallery-card" data-src="assets/photos/gallery/system/admissions-module.jpg" title="Admissions Module">
+        <img src="assets/photos/gallery/system/admissions-module.jpg" onerror="this.src='https://picsum.photos/seed/adm2026/400/280'" alt="Admissions application pipeline board" loading="lazy">
+        <div class="ss-gallery-caption"><i class="fa-solid fa-door-open"></i> Admissions Pipeline</div>
+      </div>
+      <div class="ss-gallery-item ss-gallery-card" data-src="assets/photos/gallery/system/attendance-module.jpg" title="Attendance Module">
+        <img src="assets/photos/gallery/system/attendance-module.jpg" onerror="this.src='https://picsum.photos/seed/att2026/400/280'" alt="Daily attendance tracking with SMS alerts" loading="lazy">
+        <div class="ss-gallery-caption"><i class="fa-solid fa-calendar-check"></i> Attendance Tracking</div>
+      </div>
+    </div>
+
+    <!-- Row 3: system details -->
+    <div class="ss-gallery-grid" data-aos="fade-up" data-aos-delay="200">
+      <div class="ss-gallery-item ss-gallery-card" data-src="assets/photos/gallery/system/hr-payroll-module.jpg" title="HR & Payroll">
+        <img src="assets/photos/gallery/system/hr-payroll-module.jpg" onerror="this.src='https://picsum.photos/seed/hr2026/400/260'" alt="HR and payroll staff management" loading="lazy">
+        <div class="ss-gallery-caption"><i class="fa-solid fa-users"></i> HR &amp; Payroll</div>
+      </div>
+      <div class="ss-gallery-item ss-gallery-card" data-src="assets/photos/gallery/system/examinations-module.jpg" title="Examinations">
+        <img src="assets/photos/gallery/system/examinations-module.jpg" onerror="this.src='https://picsum.photos/seed/exam2026/400/260'" alt="Examinations results entry and report cards" loading="lazy">
+        <div class="ss-gallery-caption"><i class="fa-solid fa-file-pen"></i> Examinations &amp; Results</div>
+      </div>
+      <div class="ss-gallery-item ss-gallery-card" data-src="assets/photos/gallery/system/analytics-module.jpg" title="Analytics">
+        <img src="assets/photos/gallery/system/analytics-module.jpg" onerror="this.src='https://picsum.photos/seed/anal2026/400/260'" alt="Analytics dashboard with enrollment trends" loading="lazy">
+        <div class="ss-gallery-caption"><i class="fa-solid fa-chart-line"></i> Analytics &amp; Reports</div>
+      </div>
+    </div>
+
+    <!-- Mobile screenshot -->
+    <div class="row justify-content-center mt-4" data-aos="fade-up">
+      <div class="col-md-4">
+        <div class="ss-gallery-item ss-gallery-card" data-src="assets/photos/gallery/system/mobile-app.jpg" title="Mobile View">
+          <img src="assets/photos/gallery/system/mobile-app.jpg" onerror="this.src='https://picsum.photos/seed/mobile2026/400/600'" alt="SchoolSyntaxERP mobile responsive view" loading="lazy">
+          <div class="ss-gallery-caption"><i class="fa-solid fa-mobile-screen"></i> Mobile Responsive</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CAMPUS & STUDENTS ─────────────────────────────────────── -->
+<section class="ss-section ss-section-surface" data-gallery-group="campus">
+  <div class="ss-container">
+    <div class="ss-section-header" data-aos="fade-up">
+      <span class="ss-overline">Real Institutions</span>
+      <h2>Campus &amp; <span class="text-gradient">Students</span></h2>
+      <p>From rural primary schools to urban universities — SchoolSyntaxERP transforms institutional life across 30+ countries.</p>
+    </div>
+
+    <div class="ss-gallery-grid mb-4" data-aos="fade-up">
+      <div class="ss-gallery-item ss-gallery-wide ss-gallery-card" data-src="assets/photos/gallery/campus/students-classroom.jpg" title="Students in Classroom">
+        <img src="assets/photos/gallery/campus/students-classroom.jpg" onerror="this.src='https://picsum.photos/seed/class2026a/800/480'" alt="Students actively engaged in a modern classroom" loading="lazy">
+        <div class="ss-gallery-caption"><i class="fa-solid fa-chalkboard-user"></i> Collaborative Learning</div>
+      </div>
+      <div class="ss-gallery-item ss-gallery-tall ss-gallery-card" data-src="assets/photos/gallery/campus/school-campus.jpg" title="School Campus">
+        <img src="assets/photos/gallery/campus/school-campus.jpg" onerror="this.src='https://picsum.photos/seed/campus2026a/400/560'" alt="Modern school campus exterior" loading="lazy">
+        <div class="ss-gallery-caption"><i class="fa-solid fa-school"></i> Modern Campuses</div>
+      </div>
+      <div class="ss-gallery-item ss-gallery-card" data-src="assets/photos/gallery/campus/students-computers.jpg" title="Students Using Technology">
+        <img src="assets/photos/gallery/campus/students-computers.jpg" onerror="this.src='https://picsum.photos/seed/comp2026/400/260'" alt="Students using computers and tablets in a lab" loading="lazy">
+        <div class="ss-gallery-caption"><i class="fa-solid fa-laptop"></i> Digital Learning</div>
+      </div>
+      <div class="ss-gallery-item ss-gallery-card" data-src="assets/photos/gallery/campus/teacher-students.jpg" title="Teacher with Students">
+        <img src="assets/photos/gallery/campus/teacher-students.jpg" onerror="this.src='https://picsum.photos/seed/teach2026/400/260'" alt="Teacher working with students" loading="lazy">
+        <div class="ss-gallery-caption"><i class="fa-solid fa-person-chalkboard"></i> Expert Educators</div>
+      </div>
+    </div>
+
+    <div class="ss-gallery-grid" data-aos="fade-up" data-aos-delay="100">
+      <div class="ss-gallery-item ss-gallery-card" data-src="assets/photos/gallery/campus/graduation.jpg" title="Graduation">
+        <img src="assets/photos/gallery/campus/graduation.jpg" onerror="this.src='https://picsum.photos/seed/grad2026a/400/280'" alt="Graduation ceremony students in gowns" loading="lazy">
+        <div class="ss-gallery-caption"><i class="fa-solid fa-graduation-cap"></i> Student Achievement</div>
+      </div>
+      <div class="ss-gallery-item ss-gallery-card" data-src="assets/photos/gallery/campus/school-admin.jpg" title="School Administrator">
+        <img src="assets/photos/gallery/campus/school-admin.jpg" onerror="this.src='https://picsum.photos/seed/admin2026/400/280'" alt="School administrator using SchoolSyntaxERP on laptop" loading="lazy">
+        <div class="ss-gallery-caption"><i class="fa-solid fa-desktop"></i> Empowered Administration</div>
+      </div>
+      <div class="ss-gallery-item ss-gallery-card" data-src="assets/photos/gallery/campus/parent-meeting.jpg" title="Parent Meeting">
+        <img src="assets/photos/gallery/campus/parent-meeting.jpg" onerror="this.src='https://picsum.photos/seed/parent2026/400/280'" alt="Parent-teacher meeting and admissions consultation" loading="lazy">
+        <div class="ss-gallery-caption"><i class="fa-solid fa-handshake"></i> Parent Engagement</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TEAM ──────────────────────────────────────────────────── -->
+<section class="ss-section ss-section-dark" data-gallery-group="team">
+  <div class="ss-container">
+    <div class="ss-section-header" data-aos="fade-up">
+      <span class="ss-overline">The People</span>
+      <h2>Meet the <span class="text-gradient">Team</span></h2>
+      <p>The people building SchoolSyntaxERP — passionate about making enterprise education software genuinely excellent.</p>
+    </div>
+    <div class="row g-4 justify-content-center">
+      <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="0">
+        <div class="text-center">
+          <div class="ss-gallery-item ss-gallery-card mb-3" data-src="assets/photos/team/collins-kombe.jpg" title="Mr Collins Prosper Kombe">
+            <img src="assets/photos/team/collins-kombe.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Collins+Kombe&background=4F46E5&color=fff&size=200&bold=true'" alt="Mr Collins Prosper Kombe — Founder & CEO" loading="lazy">
+            <div class="ss-gallery-caption"><i class="fa-solid fa-crown"></i> Founder &amp; CEO</div>
+          </div>
+          <div class="ss-team-name" style="font-size:.85rem;">Collins Prosper Kombe</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="50">
+        <div class="text-center">
+          <div class="ss-gallery-item ss-gallery-card mb-3" data-src="assets/photos/team/amina-waweru.jpg" title="Amina Waweru">
+            <img src="assets/photos/team/amina-waweru.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Amina+Waweru&background=7C3AED&color=fff&size=200&bold=true'" alt="Amina Waweru — Co-Founder & CTO" loading="lazy">
+            <div class="ss-gallery-caption"><i class="fa-solid fa-code"></i> CTO</div>
+          </div>
+          <div class="ss-team-name" style="font-size:.85rem;">Amina Waweru</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="100">
+        <div class="text-center">
+          <div class="ss-gallery-item ss-gallery-card mb-3" data-src="assets/photos/team/david-oyelaran.jpg" title="Dr. David Oyelaran">
+            <img src="assets/photos/team/david-oyelaran.jpg" onerror="this.src='https://ui-avatars.com/api/?name=David+Oyelaran&background=059669&color=fff&size=200&bold=true'" alt="Dr. David Oyelaran — CPO" loading="lazy">
+            <div class="ss-gallery-caption"><i class="fa-solid fa-lightbulb"></i> CPO</div>
+          </div>
+          <div class="ss-team-name" style="font-size:.85rem;">Dr. David Oyelaran</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="150">
+        <div class="text-center">
+          <div class="ss-gallery-item ss-gallery-card mb-3" data-src="assets/photos/team/fatima-mensah.jpg" title="Fatima Mensah">
+            <img src="assets/photos/team/fatima-mensah.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Fatima+Mensah&background=D97706&color=fff&size=200&bold=true'" alt="Fatima Mensah — VP Customer Success" loading="lazy">
+            <div class="ss-gallery-caption"><i class="fa-solid fa-heart"></i> VP Success</div>
+          </div>
+          <div class="ss-team-name" style="font-size:.85rem;">Fatima Mensah</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="200">
+        <div class="text-center">
+          <div class="ss-gallery-item ss-gallery-card mb-3" data-src="assets/photos/team/rajesh-sundaram.jpg" title="Rajesh Sundaram">
+            <img src="assets/photos/team/rajesh-sundaram.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Rajesh+Sundaram&background=0891B2&color=fff&size=200&bold=true'" alt="Rajesh Sundaram — VP Engineering" loading="lazy">
+            <div class="ss-gallery-caption"><i class="fa-solid fa-server"></i> VP Eng</div>
+          </div>
+          <div class="ss-team-name" style="font-size:.85rem;">Rajesh Sundaram</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="250">
+        <div class="text-center">
+          <div class="ss-gallery-item ss-gallery-card mb-3" data-src="assets/photos/team/nadia-karimi.jpg" title="Nadia Karimi">
+            <img src="assets/photos/team/nadia-karimi.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Nadia+Karimi&background=DB2777&color=fff&size=200&bold=true'" alt="Nadia Karimi — Head of Design" loading="lazy">
+            <div class="ss-gallery-caption"><i class="fa-solid fa-pen-nib"></i> Design</div>
+          </div>
+          <div class="ss-team-name" style="font-size:.85rem;">Nadia Karimi</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="ss-cta-section">
+  <div class="ss-container ss-cta-inner">
+    <div data-aos="zoom-in">
+      <span class="ss-overline ss-overline-light mb-3 d-block">Ready to Get Started?</span>
+      <h2 class="text-display-sm text-white mb-4">See it live with your own data</h2>
+      <p class="ss-cta-lead">Book a free personalised demo. Our product team will walk through the modules most relevant to your institution.</p>
+      <a href="demo.html" class="ss-btn ss-btn-light ss-btn-xl"><i class="fa-solid fa-calendar-check"></i> Book a Free Demo</a>
+    </div>
+  </div>
+</section>
+
+<footer class="ss-footer">
+  <div class="ss-container">
+    <div class="ss-footer-main">
+      <a href="index.html" class="ss-logo">
+        <div class="ss-logo-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+        <span class="ss-logo-text">School<span>Syntax</span>ERP</span>
+      </a>
+      <nav class="ss-footer-nav" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="features.html">Features</a>
+        <a href="modules.html">Modules</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="demo.html">Demo</a>
+      </nav>
+      <div class="ss-footer-social">
+        <a href="#" aria-label="Follow us on X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="Follow us on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://wa.me/255789236338" aria-label="Chat on WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="ss-footer-bar">
+      <p>&copy; 2026 SchoolSyntaxERP &bull; Founded by Mr Collins Prosper Kombe</p>
+      <div class="ss-footer-bar-links">
+        <a href="privacy-policy.html">Privacy</a>
+        <a href="terms-of-service.html">Terms</a>
+        <a href="sitemap.xml">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/255789236338" class="ss-whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp"><div class="ss-wa-pulse"></div><i class="fa-brands fa-whatsapp"></i><span class="ss-wa-tooltip">Chat on WhatsApp</span></a>
+<button type="button" class="ss-back-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<!-- Lightbox -->
+<div class="ss-lb" id="ss-lb" role="dialog" aria-modal="true" aria-label="Image lightbox">
+  <button type="button" class="ss-lb-close" id="ss-lb-close" aria-label="Close lightbox"><i class="fa-solid fa-xmark"></i></button>
+  <img src="" alt="" id="ss-lb-img">
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="assets/js/main.js"></script>
+
+<script>
+// Gallery filter
+document.querySelectorAll('.ss-gallery-filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.ss-gallery-filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    document.querySelectorAll('[data-gallery-group]').forEach(section => {
+      section.style.display = (filter === 'all' || section.dataset.galleryGroup === filter) ? '' : 'none';
+    });
+  });
+});
+
+// Lightbox
+const lb   = document.getElementById('ss-lb');
+const lbImg = document.getElementById('ss-lb-img');
+document.querySelectorAll('.ss-gallery-card').forEach(card => {
+  card.addEventListener('click', () => {
+    const src = card.dataset.src || card.querySelector('img').src;
+    const alt = card.querySelector('img').alt;
+    lbImg.src = src;
+    lbImg.alt = alt;
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  });
+});
+document.getElementById('ss-lb-close').addEventListener('click', closeLb);
+lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLb(); });
+function closeLb() {
+  lb.classList.remove('open');
+  document.body.style.overflow = '';
+  lbImg.src = '';
+}
+</script>
+
+<script>function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:'en',layout:google.translate.TranslateElement.InlineLayout.SIMPLE},'google_translate_element');}</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async defer></script>
+</body>
+</html>
