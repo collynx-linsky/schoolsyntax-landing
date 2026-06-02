@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -156,7 +156,7 @@
     </div>
 
     <div class="ss-nav-actions">
-      <div id="google_translate_element" class="ss-translate d-none d-xl-inline-flex"></div>
+      <div class="ss-lang-picker d-none d-xl-inline-flex" id="ss-lang-picker"><button class="ss-lang-btn" id="ss-lang-btn" aria-label="Select language" aria-expanded="false" type="button"><i class="fa-solid fa-globe"></i><span id="ss-lang-label">EN</span><i class="fa-solid fa-chevron-down ss-lang-chevron"></i></button><div class="ss-lang-dropdown" id="ss-lang-dropdown" role="menu"><button class="ss-lang-option active" data-lang="en" type="button">&#x1F1EC;&#x1F1E7; English</button><button class="ss-lang-option" data-lang="sw" type="button">&#x1F1F9;&#x1F1FF; Kiswahili</button><button class="ss-lang-option" data-lang="fr" type="button">&#x1F1EB;&#x1F1F7; Fran&ccedil;ais</button><button class="ss-lang-option" data-lang="ar" type="button">&#x1F1F8;&#x1F1E6; &#x639;&#x631;&#x628;&#x64A;</button><button class="ss-lang-option" data-lang="pt" type="button">&#x1F1F5;&#x1F1F9; Portugu&ecirc;s</button></div></div><div id="google_translate_element" style="display:none;position:absolute;"></div>
       <button class="ss-theme-toggle" aria-label="Switch to dark mode">
         <i class="ss-theme-icon fa-solid fa-moon"></i>
       </button>
@@ -247,46 +247,92 @@
     <!-- Full-width dashboard mockup below text -->
     <div class="ss-hero-mockup-wrap" data-aos="fade-up" data-aos-delay="300">
       <div class="ss-dashboard-mockup animate-float-slow">
+        <!-- Top bar -->
         <div class="ss-dashboard-topbar">
           <div class="ss-dashboard-dots"><span></span><span></span><span></span></div>
-          <div class="ss-dashboard-title-bar"></div>
-          <div class="d-flex gap-2">
-            <div class="ss-dash-topbar-chip"></div>
-            <div class="ss-dash-topbar-chip-sm"></div>
+          <div class="ss-db-topbar-brand"><i class="fa-solid fa-graduation-cap"></i> SchoolSyntaxERP</div>
+          <div class="ss-db-topbar-right">
+            <div class="ss-db-notif-btn"><i class="fa-solid fa-bell"></i></div>
+            <div class="ss-db-avatar-chip">CK</div>
           </div>
         </div>
+        <!-- Body -->
         <div class="ss-dashboard-body">
+          <!-- Sidebar -->
           <div class="ss-dashboard-sidebar">
-            <div class="ss-dash-sidebar-item active"><div class="ss-dash-sidebar-item-dot"></div><div class="ss-dash-sidebar-item-line"></div></div>
-            <div class="ss-dash-sidebar-item"><div class="ss-dash-sidebar-item-dot"></div><div class="ss-dash-sidebar-item-line"></div></div>
-            <div class="ss-dash-sidebar-item"><div class="ss-dash-sidebar-item-dot"></div><div class="ss-dash-sidebar-item-line"></div></div>
-            <div class="ss-dash-sidebar-item"><div class="ss-dash-sidebar-item-dot"></div><div class="ss-dash-sidebar-item-line"></div></div>
-            <div class="ss-dash-sidebar-item"><div class="ss-dash-sidebar-item-dot"></div><div class="ss-dash-sidebar-item-line"></div></div>
-            <div class="ss-dash-sidebar-item"><div class="ss-dash-sidebar-item-dot"></div><div class="ss-dash-sidebar-item-line"></div></div>
+            <div class="ss-db-nav ss-db-nav-active"><i class="fa-solid fa-gauge-high"></i><span>Dashboard</span></div>
+            <div class="ss-db-nav"><i class="fa-solid fa-user-graduate"></i><span>Students</span></div>
+            <div class="ss-db-nav"><i class="fa-solid fa-coins"></i><span>Finance</span></div>
+            <div class="ss-db-nav"><i class="fa-solid fa-calendar-check"></i><span>Attendance</span></div>
+            <div class="ss-db-nav"><i class="fa-solid fa-chart-bar"></i><span>Reports</span></div>
+            <div class="ss-db-nav"><i class="fa-solid fa-gear"></i><span>Settings</span></div>
           </div>
+          <!-- Main area -->
           <div class="ss-dashboard-main">
+            <!-- KPI metrics row -->
             <div class="ss-dash-metrics">
-              <div class="ss-dash-metric"><div class="ss-dash-metric-val"></div><div class="ss-dash-metric-label"></div></div>
-              <div class="ss-dash-metric"><div class="ss-dash-metric-val ss-dash-metric-val-green"></div><div class="ss-dash-metric-label"></div></div>
-              <div class="ss-dash-metric"><div class="ss-dash-metric-val ss-dash-metric-val-amber"></div><div class="ss-dash-metric-label"></div></div>
-              <div class="ss-dash-metric"><div class="ss-dash-metric-val ss-dash-metric-val-cyan"></div><div class="ss-dash-metric-label"></div></div>
+              <div class="ss-db-kpi">
+                <div class="ss-db-kpi-head"><span>Total Students</span><i class="fa-solid fa-user-graduate ss-db-kpi-icon ss-db-kpi-indigo"></i></div>
+                <div class="ss-db-kpi-val">1,247</div>
+                <div class="ss-db-kpi-delta ss-delta-up"><i class="fa-solid fa-arrow-up"></i> +4.2% this term</div>
+              </div>
+              <div class="ss-db-kpi">
+                <div class="ss-db-kpi-head"><span>Fee Collection</span><i class="fa-solid fa-coins ss-db-kpi-icon ss-db-kpi-green"></i></div>
+                <div class="ss-db-kpi-val ss-kpi-green">94%</div>
+                <div class="ss-db-kpi-delta ss-delta-up"><i class="fa-solid fa-arrow-up"></i> TZS 48.2M</div>
+              </div>
+              <div class="ss-db-kpi">
+                <div class="ss-db-kpi-head"><span>Attendance</span><i class="fa-solid fa-calendar-check ss-db-kpi-icon ss-db-kpi-amber"></i></div>
+                <div class="ss-db-kpi-val ss-kpi-amber">91%</div>
+                <div class="ss-db-kpi-delta ss-delta-up"><i class="fa-solid fa-arrow-up"></i> +1.8% vs last wk</div>
+              </div>
+              <div class="ss-db-kpi">
+                <div class="ss-db-kpi-head"><span>Active Staff</span><i class="fa-solid fa-chalkboard-user ss-db-kpi-icon ss-db-kpi-cyan"></i></div>
+                <div class="ss-db-kpi-val ss-kpi-cyan">87</div>
+                <div class="ss-db-kpi-delta ss-delta-up"><i class="fa-solid fa-arrow-up"></i> All present</div>
+              </div>
             </div>
+            <!-- Charts row -->
             <div class="ss-dash-charts">
+              <!-- Bar chart: monthly fee collection -->
               <div class="ss-dash-chart-box">
-                <div class="ss-dash-chart-label"></div>
-                <div class="ss-dash-chart-bars">
-                  <div class="ss-dash-bar" style="height:60%;"></div>
-                  <div class="ss-dash-bar" style="height:80%;"></div>
-                  <div class="ss-dash-bar" style="height:50%;"></div>
-                  <div class="ss-dash-bar" style="height:90%;"></div>
-                  <div class="ss-dash-bar" style="height:70%;"></div>
-                  <div class="ss-dash-bar" style="height:85%;"></div>
-                  <div class="ss-dash-bar" style="height:65%;"></div>
-                  <div class="ss-dash-bar" style="height:95%;opacity:1;"></div>
+                <div class="ss-db-chart-head">
+                  <span class="ss-db-chart-ttl">Fee Collection 2025</span>
+                  <span class="ss-db-chart-pill">Monthly</span>
+                </div>
+                <div class="ss-db-barchart">
+                  <div class="ss-db-bars-row">
+                    <div class="ss-dash-bar" style="height:68%;"></div>
+                    <div class="ss-dash-bar" style="height:82%;"></div>
+                    <div class="ss-dash-bar" style="height:55%;"></div>
+                    <div class="ss-dash-bar" style="height:91%;"></div>
+                    <div class="ss-dash-bar" style="height:74%;"></div>
+                    <div class="ss-dash-bar" style="height:88%;"></div>
+                    <div class="ss-dash-bar" style="height:63%;"></div>
+                    <div class="ss-dash-bar ss-dash-bar-hi" style="height:94%;"></div>
+                  </div>
+                  <div class="ss-db-blbls-row">
+                    <span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span>
+                    <span>May</span><span>Jun</span><span>Jul</span><span class="ss-db-blbl-hi">Aug</span>
+                  </div>
                 </div>
               </div>
-              <div class="ss-dash-chart-box" style="display:flex;align-items:center;justify-content:center;">
-                <div class="ss-dash-chart-donut"><div class="ss-dash-chart-donut-inner"></div></div>
+              <!-- Donut chart: attendance -->
+              <div class="ss-dash-chart-box ss-db-donut-box">
+                <div class="ss-db-chart-head">
+                  <span class="ss-db-chart-ttl">Attendance</span>
+                </div>
+                <div class="ss-db-donut-area">
+                  <div class="ss-db-donut-ring">
+                    <span class="ss-db-donut-num">91%</span>
+                    <span class="ss-db-donut-sub">Present</span>
+                  </div>
+                  <div class="ss-db-legend">
+                    <div class="ss-db-leg"><span class="ss-db-leg-dot" style="background:var(--color-primary);"></span>Present 91%</div>
+                    <div class="ss-db-leg"><span class="ss-db-leg-dot" style="background:var(--color-warning);"></span>Late 5%</div>
+                    <div class="ss-db-leg"><span class="ss-db-leg-dot" style="background:#EF4444;"></span>Absent 4%</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -296,15 +342,15 @@
 
     <!-- Trust logos -->
     <div class="mt-5 pt-4 ss-divider-top" data-aos="fade-up" data-aos-delay="400">
-      <p class="text-center mb-4 ss-trust-label">Trusted by forward-thinking institutions</p>
+      <p class="text-center mb-4 ss-trust-label">Trusted by forward-thinking institutions across Africa</p>
       <div class="ss-trust-bar">
-        <span class="ss-trust-logo">Greenfield Academy</span>
-        <span class="ss-trust-logo">Nexus University</span>
-        <span class="ss-trust-logo">Horizon Polytechnic</span>
-        <span class="ss-trust-logo">Brightstone Schools</span>
-        <span class="ss-trust-logo">Metro College</span>
-        <span class="ss-trust-logo">Apex Learning Network</span>
-        <span class="ss-trust-logo">StellarEd Group</span>
+        <span class="ss-trust-logo">Dar es Salaam Institute of Technology</span>
+        <span class="ss-trust-logo">Makerere Business Institute</span>
+        <span class="ss-trust-logo">Kigali Academy Rwanda</span>
+        <span class="ss-trust-logo">Nairobi Technical College</span>
+        <span class="ss-trust-logo">Arusha City Schools</span>
+        <span class="ss-trust-logo">Mwanza Learning Network</span>
+        <span class="ss-trust-logo">East Africa Education Group</span>
       </div>
     </div>
 
@@ -529,12 +575,12 @@
             <div class="ss-testimonial-stars">
               <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>
-            <p class="ss-testimonial-text">"We run a network of 12 schools across three counties. SchoolSyntaxERP gave us centralised visibility we never had before. The multi-tenant architecture means each school feels like they have their own system, while we get the bird's eye view we need as a network."</p>
+            <p class="ss-testimonial-text">"Before SchoolSyntaxERP, collecting fees alone took our bursar an entire week every term. Now parents pay via mobile money directly through the platform and our collection rate jumped from 67% to 94% in the very first term. The change has been remarkable for our whole school."</p>
             <div class="ss-testimonial-author">
-              <img class="ss-testimonial-avatar-img" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Amara Ndiaye">
+              <img class="ss-testimonial-avatar-img" src="https://randomuser.me/api/portraits/women/76.jpg" alt="Amina Salehe" onerror="this.src='https://ui-avatars.com/api/?name=Amina+Salehe&background=4F46E5&color=fff&size=80&bold=true'">
               <div>
-                <div class="ss-testimonial-name">Amara Ndiaye</div>
-                <div class="ss-testimonial-role">Group Director, Brightstone Schools Network</div>
+                <div class="ss-testimonial-name">Amina Salehe</div>
+                <div class="ss-testimonial-role">Headmistress, Furaha Girls Secondary School, Dar es Salaam</div>
               </div>
             </div>
           </div>
@@ -544,12 +590,12 @@
             <div class="ss-testimonial-stars">
               <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>
-            <p class="ss-testimonial-text">"Our finance team was spending two weeks every term manually generating invoices and chasing payments. With SchoolSyntaxERP, automated billing alone saved us over 40 staff-hours per month. The ROI was clear within the first term."</p>
+            <p class="ss-testimonial-text">"We manage three campuses across Kampala and needed one system to see everything. SchoolSyntaxERP's multi-tenant setup means each campus has its own space while I compare enrolments, finances, and performance across all three from a single screen. It is truly game-changing."</p>
             <div class="ss-testimonial-author">
-              <img class="ss-testimonial-avatar-img" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Dr. Michael Obi">
+              <img class="ss-testimonial-avatar-img" src="https://randomuser.me/api/portraits/men/35.jpg" alt="Dr. Emmanuel Ogwang" onerror="this.src='https://ui-avatars.com/api/?name=Emmanuel+Ogwang&background=059669&color=fff&size=80&bold=true'">
               <div>
-                <div class="ss-testimonial-name">Dr. Michael Obi</div>
-                <div class="ss-testimonial-role">Vice Chancellor, Nexus University</div>
+                <div class="ss-testimonial-name">Dr. Emmanuel Ogwang</div>
+                <div class="ss-testimonial-role">Principal, Ntinda Progressive College, Kampala, Uganda</div>
               </div>
             </div>
           </div>
@@ -559,12 +605,12 @@
             <div class="ss-testimonial-stars">
               <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
             </div>
-            <p class="ss-testimonial-text">"Implementation was surprisingly smooth. The onboarding team walked us through every configuration. Within three days, our entire staff were onboarded and we processed our first batch of results using the system. Exceptional product, exceptional support."</p>
+            <p class="ss-testimonial-text">"The parent portal changed everything for us. Parents receive an instant SMS when a child is absent, when fees are due, and when results are published. Our parent satisfaction scores have risen from 61% to 89% since we deployed SchoolSyntaxERP. Parents now trust us far more."</p>
             <div class="ss-testimonial-author">
-              <img class="ss-testimonial-avatar-img" src="https://randomuser.me/api/portraits/women/68.jpg" alt="Sarah Kimani">
+              <img class="ss-testimonial-avatar-img" src="https://randomuser.me/api/portraits/women/57.jpg" alt="Claudine Uwimana" onerror="this.src='https://ui-avatars.com/api/?name=Claudine+Uwimana&background=7C3AED&color=fff&size=80&bold=true'">
               <div>
-                <div class="ss-testimonial-name">Sarah Kimani</div>
-                <div class="ss-testimonial-role">Principal, Horizon Polytechnic</div>
+                <div class="ss-testimonial-name">Claudine Uwimana</div>
+                <div class="ss-testimonial-role">Director of Operations, Kigali Scholars Network, Rwanda</div>
               </div>
             </div>
           </div>
@@ -574,12 +620,12 @@
             <div class="ss-testimonial-stars">
               <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>
-            <p class="ss-testimonial-text">"The parent communication module alone transformed our parent-school relationship. We send weekly academic updates, attendance alerts, and fee reminders automatically. Parents now rate our communication as 'excellent' in every survey we run."</p>
+            <p class="ss-testimonial-text">"Result processing used to take our teachers three days of manual entry. With SchoolSyntaxERP, teachers enter marks as they mark, the system calculates everything automatically, and parents receive results the very same day. It is a completely different world for our school."</p>
             <div class="ss-testimonial-author">
-              <img class="ss-testimonial-avatar-img" src="https://randomuser.me/api/portraits/men/45.jpg" alt="James Mutua">
+              <img class="ss-testimonial-avatar-img" src="https://randomuser.me/api/portraits/men/64.jpg" alt="James Otieno" onerror="this.src='https://ui-avatars.com/api/?name=James+Otieno&background=D97706&color=fff&size=80&bold=true'">
               <div>
-                <div class="ss-testimonial-name">James Mutua</div>
-                <div class="ss-testimonial-role">Head Teacher, Greenfield Academy</div>
+                <div class="ss-testimonial-name">James Otieno</div>
+                <div class="ss-testimonial-role">Head Teacher, Nyanza Boys High School, Kisumu, Kenya</div>
               </div>
             </div>
           </div>

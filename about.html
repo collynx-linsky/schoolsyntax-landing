@@ -59,7 +59,7 @@
       </div>
     </div>
     <div class="ss-nav-actions">
-      <div id="google_translate_element" class="ss-translate d-none d-xl-inline-flex"></div>
+      <div class="ss-lang-picker d-none d-xl-inline-flex" id="ss-lang-picker"><button class="ss-lang-btn" id="ss-lang-btn" aria-label="Select language" aria-expanded="false" type="button"><i class="fa-solid fa-globe"></i><span id="ss-lang-label">EN</span><i class="fa-solid fa-chevron-down ss-lang-chevron"></i></button><div class="ss-lang-dropdown" id="ss-lang-dropdown" role="menu"><button class="ss-lang-option active" data-lang="en" type="button">&#x1F1EC;&#x1F1E7; English</button><button class="ss-lang-option" data-lang="sw" type="button">&#x1F1F9;&#x1F1FF; Kiswahili</button><button class="ss-lang-option" data-lang="fr" type="button">&#x1F1EB;&#x1F1F7; Fran&ccedil;ais</button><button class="ss-lang-option" data-lang="ar" type="button">&#x1F1F8;&#x1F1E6; &#x639;&#x631;&#x628;&#x64A;</button><button class="ss-lang-option" data-lang="pt" type="button">&#x1F1F5;&#x1F1F9; Portugu&ecirc;s</button></div></div><div id="google_translate_element" style="display:none;position:absolute;"></div>
       <button class="ss-theme-toggle" aria-label="Switch to dark mode"><i class="ss-theme-icon fa-solid fa-moon"></i></button>
       <a href="demo.html" class="ss-btn ss-btn-primary ss-btn-sm">Request Demo</a>
       <button class="ss-hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
@@ -178,57 +178,17 @@
 <section class="ss-section ss-section-surface">
   <div class="ss-container">
     <div class="ss-section-header" data-aos="fade-up">
-      <span class="ss-overline">The Team</span>
-      <h2>Built by people who <span class="text-gradient">understand education</span></h2>
-      <p>Our team brings together deep expertise in education systems, enterprise software engineering, and product design.</p>
+      <span class="ss-overline">The Founder</span>
+      <h2>Founded and led by <span class="text-gradient">an education technologist</span></h2>
+      <p>SchoolSyntaxERP was built from the ground up by Mr. Collins Kombe, with the mission to give every African institution access to world-class management tools.</p>
     </div>
-    <div class="row g-4">
-      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-8 col-lg-5" data-aos="fade-up" data-aos-delay="0">
         <div class="ss-team-card">
           <img class="ss-team-avatar-img" src="assets/photos/team/collins-kombe.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Collins+Kombe&background=4F46E5&color=fff&size=160&bold=true'" alt="Mr Collins Prosper Kombe">
           <div class="ss-team-name">Mr Collins Prosper Kombe</div>
           <div class="ss-team-role">Founder &amp; CEO</div>
-          <p class="ss-team-bio">Visionary entrepreneur and technologist with deep roots in education technology across Africa. Founded SchoolSyntaxERP to bring enterprise-grade institutional management to every school on the continent and beyond.</p>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="ss-team-card">
-          <img class="ss-team-avatar-img" src="assets/photos/team/amina-waweru.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Amina+Waweru&background=7C3AED&color=fff&size=160&bold=true'" alt="Amina Waweru">
-          <div class="ss-team-name">Amina Waweru</div>
-          <div class="ss-team-role">Co-Founder &amp; CTO</div>
-          <p class="ss-team-bio">15 years in enterprise software architecture. Previously led engineering at two EdTech unicorns. Expert in multi-tenant SaaS, distributed systems, and data security.</p>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="ss-team-card">
-          <img class="ss-team-avatar-img" src="assets/photos/team/david-oyelaran.jpg" onerror="this.src='https://ui-avatars.com/api/?name=David+Oyelaran&background=059669&color=fff&size=160&bold=true'" alt="Dr. David Oyelaran">
-          <div class="ss-team-name">Dr. David Oyelaran</div>
-          <div class="ss-team-role">Chief Product Officer</div>
-          <p class="ss-team-bio">Former university registrar turned product visionary. Deeply understands the operational pain points of academic institutions from the inside. Author of "Digital Transformation in Education."</p>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
-        <div class="ss-team-card">
-          <img class="ss-team-avatar-img" src="assets/photos/team/fatima-mensah.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Fatima+Mensah&background=D97706&color=fff&size=160&bold=true'" alt="Fatima Mensah">
-          <div class="ss-team-name">Fatima Mensah</div>
-          <div class="ss-team-role">VP of Customer Success</div>
-          <p class="ss-team-bio">Customer success veteran with 10+ years implementing enterprise software in complex organizational environments. Responsible for our industry-leading 97% customer retention rate.</p>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="ss-team-card">
-          <img class="ss-team-avatar-img" src="assets/photos/team/rajesh-sundaram.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Rajesh+Sundaram&background=0891B2&color=fff&size=160&bold=true'" alt="Rajesh Sundaram">
-          <div class="ss-team-name">Rajesh Sundaram</div>
-          <div class="ss-team-role">VP of Engineering</div>
-          <p class="ss-team-bio">Infrastructure and security specialist. Built systems that serve millions of concurrent users. Former Principal Engineer at AWS. Leads our 22-person engineering team.</p>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="ss-team-card">
-          <img class="ss-team-avatar-img" src="assets/photos/team/nadia-karimi.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Nadia+Karimi&background=DB2777&color=fff&size=160&bold=true'" alt="Nadia Karimi">
-          <div class="ss-team-name">Nadia Karimi</div>
-          <div class="ss-team-role">Head of Design</div>
-          <p class="ss-team-bio">UX/UI designer passionate about making complex enterprise software feel effortless. Previously at Figma and Intercom. Believes great software is invisible — it just works.</p>
+          <p class="ss-team-bio">Visionary entrepreneur and technologist with deep roots in education technology across Africa. Founded SchoolSyntaxERP to bring enterprise-grade institutional management to every school on the continent and beyond. Based in Dar es Salaam, Tanzania.</p>
         </div>
       </div>
     </div>
